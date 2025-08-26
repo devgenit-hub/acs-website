@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 
@@ -13,13 +14,13 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex justify-end flex-wrap gap-4 space-x-4">
           {links.map((link, idx) => (
-            <a
+            <Link
               key={idx}
               href={link.link}
               className="transition-colors hover:text-[var(--primary)] px-2 py-1 rounded"
             >
               {link.text}
-            </a>
+            </Link>
           ))}
         </div>
         {/* Hamburger Icon */}
@@ -37,14 +38,14 @@ export default function Navbar() {
         <div className="md:hidden bg-[var(--background)] shadow-lg border-t border-[var(--border)]">
           <div className="flex flex-col items-center py-2">
             {links.map((link, idx) => (
-              <a
+              <Link
                 key={idx}
                 href={link.link}
                 className="py-2 w-full text-center hover:text-[var(--primary)] transition-colors rounded"
                 onClick={() => setOpen(false)}
               >
                 {link.text}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -62,7 +63,10 @@ const links: Array<{ text: string; link: string }> = [
     text: 'Call For Papers',
     link: '/call-for-paper',
   },
-  { text: 'Important Dates', link: '/important-dates' },
+  {
+    text: 'Important Dates',
+    link: '/important-dates',
+  },
   {
     text: 'Registration',
     link: '/registration',
