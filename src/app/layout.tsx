@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { AppProvider } from '@/context/app-context';
 import { LocaleProvider } from '@/providers/locale-provider';
 import { siteConfig } from '@/config/site';
+import Navbar from '@/components/Navbar';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,14 +39,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning={true} data-theme="brand">
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>
           <LocaleProvider>
-            <AppProvider>{children}</AppProvider>
+            <AppProvider>
+              <Navbar />
+              {children}
+            </AppProvider>
           </LocaleProvider>
         </ThemeProvider>
       </body>
