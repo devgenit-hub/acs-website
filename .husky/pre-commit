@@ -1,4 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# Husky v10 style hook (no sourcing of _/husky.sh)
 
 npx lint-staged
