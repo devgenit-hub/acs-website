@@ -42,7 +42,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true} data-theme="brand">
       <body
-        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>

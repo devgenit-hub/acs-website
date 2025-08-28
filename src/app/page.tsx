@@ -1,6 +1,6 @@
-import Goals from '../components/Scope';
+import Scope from '../components/Scope';
 import HeroCarousel from './components/HeroCarousel';
-import KeynoteSpeakers from './components/KeynoteSpeakers';
+import KeynoteSpeakers from '../components/KeynoteSpeakers';
 import PublicationPartner from './components/PublicationPartner';
 import Sponsors from './components/Sponsors';
 import WelcomeMessage from './components/WelcomeMessage';
@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <HeroCarousel />
       <WelcomeMessage />
-      <Goals />
+      <Scope />
       <KeynoteSpeakers />
       <PublicationPartner />
       <Sponsors />
