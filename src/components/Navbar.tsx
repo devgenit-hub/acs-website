@@ -4,6 +4,42 @@ import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 
+interface Links {
+  text: string;
+  link: string;
+}
+
+const links: Links[] = [
+  {
+    text: 'Home Page',
+    link: '/',
+  },
+  {
+    text: 'Call For Papers',
+    link: '/call-for-paper',
+  },
+  {
+    text: 'Important Dates',
+    link: '/important-dates',
+  },
+  {
+    text: 'Registration',
+    link: '/registration',
+  },
+  {
+    text: 'Paper Submission',
+    link: '/paper-submission',
+  },
+  {
+    text: 'Committee',
+    link: '/committee',
+  },
+  {
+    text: 'Keynote Speakers',
+    link: '/keynote-speakers',
+  },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -55,34 +91,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-const links: Array<{ text: string; link: string }> = [
-  {
-    text: 'Home Page',
-    link: '/',
-  },
-  {
-    text: 'Call For Papers',
-    link: '/call-for-paper',
-  },
-  {
-    text: 'Important Dates',
-    link: '/important-dates',
-  },
-  {
-    text: 'Registration',
-    link: '/registration',
-  },
-  {
-    text: 'Paper Submission',
-    link: '/paper-submission',
-  },
-  {
-    text: 'Committee',
-    link: '/committee',
-  },
-  {
-    text: 'Keynote Speakers',
-    link: '/keynote-speakers',
-  },
-];

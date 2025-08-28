@@ -6,6 +6,7 @@ import { AppProvider } from '@/context/app-context';
 import { LocaleProvider } from '@/providers/locale-provider';
 import { siteConfig } from '@/config/site';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -49,6 +50,7 @@ export default function RootLayout({
             <AppProvider>
               <Navbar />
               {children}
+              <Footer />
             </AppProvider>
           </LocaleProvider>
         </ThemeProvider>

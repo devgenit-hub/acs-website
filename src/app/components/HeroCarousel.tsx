@@ -4,6 +4,34 @@ import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
 import { FC } from 'react';
 
+interface Images {
+  link: string;
+  alt: string;
+}
+
+const images: Images[] = [
+  {
+    link: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba',
+    alt: 'Orange cat with blue eyes looking at camera',
+  },
+  {
+    link: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4',
+    alt: 'Gray cat relaxing on wooden surface',
+  },
+  {
+    link: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d',
+    alt: 'Close up of white cat with mesmerizing green eyes',
+  },
+  {
+    link: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5',
+    alt: 'Tabby cat sitting gracefully against dark background',
+  },
+  {
+    link: 'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec',
+    alt: 'Curious kitten looking up with playful expression',
+  },
+];
+
 const HeroCarousel: FC = () => {
   return (
     <div>
@@ -134,26 +162,3 @@ const Actions = () => {
     </div>
   );
 };
-
-const images: Array<{ link: string; alt: string }> = [
-  {
-    link: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba',
-    alt: 'Orange cat with blue eyes looking at camera',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4',
-    alt: 'Gray cat relaxing on wooden surface',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d',
-    alt: 'Close up of white cat with mesmerizing green eyes',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5',
-    alt: 'Tabby cat sitting gracefully against dark background',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec',
-    alt: 'Curious kitten looking up with playful expression',
-  },
-];
