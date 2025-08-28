@@ -1,4 +1,4 @@
-import Goals from './components/Goals';
+import Goals from '../components/Scope';
 import HeroCarousel from './components/HeroCarousel';
 import KeynoteSpeakers from './components/KeynoteSpeakers';
 import PublicationPartner from './components/PublicationPartner';

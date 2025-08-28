@@ -38,7 +38,7 @@ const HeroCarousel: FC = () => {
       <div className="w-full relative">
         {/* Fixed Text Overlay */}
         <div className="absolute top-0 left-[50px] right-[50px] h-full flex items-center justify-center z-10 pointer-events-none">
-          <div className="text-center text-white px-6 max-w-6xl pointer-events-auto">
+          <div className="text-center text-white sm:px-6 max-w-6xl pointer-events-auto">
             {/* Main Title */}
             <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
               1st International Conference on Science and Humanities for Sustainable Development
