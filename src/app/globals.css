@@ -1,81 +1,184 @@
 @import 'tailwindcss';
 
-/* Theme tokens in HSL, consumed by Tailwind via tailwind.config.ts */
+/* Tailwind v4 native theme tokens (HEX) */
+@theme {
+  /* Screens (breakpoints) */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Container */
+  --container-*: initial;
+  --container-padding: 1rem;
+
+  /* Brand palette */
+  --color-deep-blue: #004b87; /* primary brand */
+  --color-bright-yellow: #ffcc00; /* callouts/CTAs */
+  --color-sky-blue: #4da6ff; /* links/hover/ring */
+  --color-soft-gray: #e6e6e6; /* surfaces */
+  --color-dark-gray: #333333; /* body text */
+
+  /* Defaults (used by Tailwind utilities) */
+  --color-background: #ffffff;
+  --color-foreground: var(--color-dark-gray);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-dark-gray);
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-dark-gray);
+  --color-primary: var(--color-deep-blue);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-soft-gray);
+  --color-secondary-foreground: var(--color-dark-gray);
+  --color-muted: var(--color-soft-gray);
+  --color-muted-foreground: #6b7280; /* slate-500-ish for readability */
+  --color-accent: var(--color-bright-yellow);
+  --color-accent-foreground: #0b0b0c;
+  --color-destructive: #b91c1c; /* accessible red */
+  --color-destructive-foreground: #ffffff;
+  --color-border: #d1d5db; /* neutral border */
+  --color-input: #d1d5db;
+  --color-ring: var(--color-sky-blue);
+}
+
 :root {
   /* Base radius for rounded utilities */
   --radius: 0.5rem;
 
   /* Light theme (default) */
   --background: #ffffff;
-  --foreground: #0b0b0c;
+  --foreground: var(--color-dark-gray);
 
   --card: #ffffff;
-  --card-foreground: #0b0b0c;
+  --card-foreground: var(--color-dark-gray);
 
   --popover: #ffffff;
-  --popover-foreground: #0b0b0c;
+  --popover-foreground: var(--color-dark-gray);
 
-  --primary: #0b0b0c; /* main text */
-  --primary-foreground: #fafafa;
+  --primary: var(--color-deep-blue);
+  --primary-foreground: #ffffff;
 
-  --secondary: #f4f4f5;
-  --secondary-foreground: #0b0b0c;
+  --secondary: var(--color-soft-gray);
+  --secondary-foreground: var(--color-dark-gray);
 
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted: var(--color-soft-gray);
+  --muted-foreground: #6b7280;
 
-  --accent: #f4f4f5;
+  --accent: var(--color-bright-yellow);
   --accent-foreground: #0b0b0c;
 
-  --destructive: #ef4444;
-  --destructive-foreground: #fafafa;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
 
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #0b0b0c;
+  --border: #d1d5db;
+  --input: #d1d5db;
+  --ring: var(--color-sky-blue);
+
+  /* Sync Tailwind v4 tokens for light */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
-
-/* No automatic dark mode by system preference; light is default in all cases. */
 
 /* Optional theme switcher: set data-theme="dark" on html/body to force dark */
 html[data-theme='dark'],
 body[data-theme='dark'] {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
+  /* Dark uses a deep-navy surface for academic tone */
+  --background: #0a1624; /* near-navy */
+  --foreground: #f5f7fa;
 
-  --card: #0a0a0a;
-  --card-foreground: #fafafa;
+  --card: #0c1c30;
+  --card-foreground: #f5f7fa;
 
-  --popover: #0a0a0a;
-  --popover-foreground: #fafafa;
+  --popover: #0c1c30;
+  --popover-foreground: #f5f7fa;
 
-  --primary: #fafafa;
+  --primary: var(--color-bright-yellow); /* high-contrast headings/CTAs */
   --primary-foreground: #0b0b0c;
 
-  --secondary: #1f1f23;
-  --secondary-foreground: #fafafa;
+  --secondary: #122943; /* subdued panels */
+  --secondary-foreground: #e6eef8;
 
-  --muted: #1f1f23;
-  --muted-foreground: #a1a1aa;
+  --muted: #122943;
+  --muted-foreground: #a9b3c3;
 
-  --accent: #1f1f23;
-  --accent-foreground: #fafafa;
+  --accent: var(--color-sky-blue);
+  --accent-foreground: #081320;
 
   --destructive: #7f1d1d;
   --destructive-foreground: #fff7f7;
 
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #d4d4d8;
+  --border: #1b3553;
+  --input: #1b3553;
+  --ring: var(--color-sky-blue);
+
+  /* Tailwind v4 tokens for dark (sync) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-/* Optional: create your own theme e.g., "brand" and toggle data-theme="brand" */
+/* Optional: "brand" variant for event campaigns while staying on-palette */
 html[data-theme='brand'],
 body[data-theme='brand'] {
-  --primary: #2563eb; /* brand blue */
-  --primary-foreground: #f1f5f9;
-  --accent: #f97316; /* orange */
-  --accent-foreground: #f1f5f9;
+  --primary: var(--color-deep-blue);
+  --primary-foreground: #ffffff;
+  --accent: var(--color-bright-yellow);
+  --accent-foreground: #0b0b0c;
+
+  --color-background: #ffffff;
+  --color-foreground: var(--color-dark-gray);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-dark-gray);
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-dark-gray);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--color-soft-gray);
+  --color-secondary-foreground: var(--color-dark-gray);
+  --color-muted: var(--color-soft-gray);
+  --color-muted-foreground: #6b7280;
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #d1d5db;
+  --color-input: #d1d5db;
+  --color-ring: var(--color-sky-blue);
 }
 
 /* Base styles */
@@ -87,4 +190,9 @@ body {
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+/* Default ring color override helper */
+.ring-theme {
+  --tw-ring-color: var(--ring) !important;
 }
