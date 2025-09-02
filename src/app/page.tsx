@@ -1,5 +1,7 @@
 import Landing from '@/pages/Landing';
 import { ThemeToggle } from '@/components/theme-toggle';
+import Image from 'next/image';
+import { mainLogo } from '@/assets';
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
           <h1 className="text-2xl font-semibold">Theme tokens demo</h1>
           <ThemeToggle />
         </header>
+
+        <Image src={mainLogo} height={350} width={350} alt="nd" />
 
         {/* Debug block: raw CSS variable to verify tokens */}
         <div
