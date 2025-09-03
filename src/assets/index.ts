@@ -1,1 +1,1 @@
-export const mainLogo = '/images/logos/main.jpeg';
+export const mainLogo = '/images/logos/main.png';

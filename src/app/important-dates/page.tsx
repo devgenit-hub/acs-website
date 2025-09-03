@@ -20,46 +20,46 @@ const dates: Dates[] = [
     id: 1,
     title: 'Abstract Submission Deadline',
     date: '05th September, 2025',
-    icon: <MdOutlineAssignment className="w-10 h-10 text-green-600" />,
+    icon: <MdOutlineAssignment className="w-10 h-10 text-primary" />,
     strikethrough: ['10th August, 2025', '25th August, 2025'],
   },
   {
     id: 2,
     title: 'Notification of Acceptance',
     date: '10th September, 2025',
-    icon: <MdOutlineNotifications className="w-10 h-10 text-green-600" />,
+    icon: <MdOutlineNotifications className="w-10 h-10 text-primary" />,
   },
   {
     id: 3,
     title: 'Camera Ready Paper Submission Deadline',
     date: '20th September, 2025',
-    icon: <MdOutlineVerified className="w-10 h-10 text-green-600" />,
+    icon: <MdOutlineVerified className="w-10 h-10 text-primary" />,
   },
   {
     id: 4,
     title: 'Registration Deadline',
     date: '1st October, 2025',
-    icon: <MdOutlineCalendarToday className="w-10 h-10 text-green-600" />,
+    icon: <MdOutlineCalendarToday className="w-10 h-10 text-primary" />,
   },
   {
     id: 5,
     title: 'Conference Date',
     date: '23-24th October, 2025',
-    icon: <MdRocketLaunch className="w-10 h-10 text-green-600" />,
+    icon: <MdRocketLaunch className="w-10 h-10 text-primary" />,
   },
 ];
 
 export default function ImportantDatesPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white to-gray-100">
+    <main className="min-h-screen bg-gradient-to-br from-background to-secondary">
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent mb-4">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-4">
               Important Dates
             </h1>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="text-muted-foreground max-w-3xl mx-auto">
               1st International Conference on Science and Humanities for Sustainable Development –
               ICSHSD
             </p>
@@ -68,7 +68,7 @@ export default function ImportantDatesPage() {
           {/* Timeline */}
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-green-600/20 to-green-700/20" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/20 to-primary/20" />
 
             {/* Timeline Items */}
             <div className="space-y-12">
@@ -80,7 +80,7 @@ export default function ImportantDatesPage() {
                   } flex-col items-start`}
                 >
                   {/* Mobile Timeline Line */}
-                  <div className="absolute h-full w-0.5 bg-green-600/20 left-8 top-0 md:hidden" />
+                  <div className="absolute h-full w-0.5 bg-primary/20 left-8 top-0 md:hidden" />
 
                   {/* Content */}
                   <div
@@ -89,8 +89,8 @@ export default function ImportantDatesPage() {
                     } pl-24 md:pl-0`}
                   >
                     <div
-                      className="bg-white/70 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-green-100 
-                                hover:border-green-200 transition-all duration-300"
+                      className="bg-card/70 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-border 
+                                hover:border-ring transition-all duration-300"
                     >
                       <div
                         className={`flex items-center gap-4 mb-3 ${
@@ -100,7 +100,7 @@ export default function ImportantDatesPage() {
                         <div className="flex-shrink-0">{item.icon}</div>
                         <div className="flex-1" />
                       </div>
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">
                         {item.title}
                       </h3>
                       {item.strikethrough ? (
@@ -108,28 +108,26 @@ export default function ImportantDatesPage() {
                           {item.strikethrough.map((date, i) => (
                             <p
                               key={i}
-                              className="text-sm md:text-base text-gray-500 line-through mb-1"
+                              className="text-sm md:text-base text-muted-foreground line-through mb-1"
                             >
                               {date}
                             </p>
                           ))}
-                          <p className="text-sm md:text-base text-green-600 font-medium">
+                          <p className="text-sm md:text-base text-primary font-medium">
                             {item.date}
                           </p>
                         </>
                       ) : (
-                        <p className="text-sm md:text-base text-green-600 font-medium">
-                          {item.date}
-                        </p>
+                        <p className="text-sm md:text-base text-primary font-medium">{item.date}</p>
                       )}
                     </div>
                   </div>
 
                   {/* Center Dot - Desktop */}
-                  <div className="hidden md:block w-4 h-4 bg-green-600 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10" />
+                  <div className="hidden md:block w-4 h-4 bg-primary rounded-full absolute left-1/2 transform -translate-x-1/2 z-10" />
 
                   {/* Left Dot - Mobile */}
-                  <div className="w-4 h-4 bg-green-600 rounded-full absolute left-8 transform -translate-x-1/2 top-8 md:hidden z-10" />
+                  <div className="w-4 h-4 bg-primary rounded-full absolute left-8 transform -translate-x-1/2 top-8 md:hidden z-10" />
                 </div>
               ))}
             </div>

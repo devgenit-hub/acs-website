@@ -6,16 +6,14 @@ export default function Transport() {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent mb-4">
-            Transport
-          </h2>
+          <h2 className="text-4xl font-bold bg-clip-text text-primary mb-4">Transport</h2>
         </div>
 
         {/* Transport Card */}
         <div className="flex justify-center">
           <div
             className="w-full max-w-4xl bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg 
-                       border border-green-100 hover:border-green-200 transition-all duration-300"
+                       border border-deep-blue/50 hover:border-deep-blue transition-all duration-300"
           >
             {/* Content Grid */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -40,7 +38,7 @@ export default function Transport() {
                   <h3 className="text-2xl font-semibold text-gray-800">
                     Conference Transportation
                   </h3>
-                  <div className="h-1 w-20 bg-green-600/20 rounded-full" />
+                  <div className="h-1 w-20 bg-primary/20 rounded-full" />
                   <p className="text-gray-600 leading-relaxed">
                     The conference organizer will provide transportation facilities for the
                     participants from Dhaka and Gazipur City to the conference venue.
@@ -51,7 +49,7 @@ export default function Transport() {
                 <div className="space-y-3 pt-4">
                   <div className="flex items-center text-gray-700">
                     <svg
-                      className="w-5 h-5 text-green-600 mr-3"
+                      className="w-5 h-5 text-deep-blue mr-3"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -67,7 +65,7 @@ export default function Transport() {
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg
-                      className="w-5 h-5 text-green-600 mr-3"
+                      className="w-5 h-5 text-deep-blue mr-3"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -83,7 +81,7 @@ export default function Transport() {
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg
-                      className="w-5 h-5 text-green-600 mr-3"
+                      className="w-5 h-5 text-deep-blue mr-3"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

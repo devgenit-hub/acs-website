@@ -1,27 +1,25 @@
 export default function ContactUs() {
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-white to-gray-100">
+    <section className="py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent mb-4">
-            Contact Information
-          </h2>
+          <h2 className="text-4xl font-bold bg-clip-text text-primary mb-4">Contact Information</h2>
         </div>
 
         {/* Contact Card */}
         <div className="flex justify-center">
           <div
-            className="w-full max-w-4xl bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg 
-                       border border-green-100 hover:border-green-200 transition-all duration-300"
+            className="w-full max-w-4xl bg-card/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg 
+                       border border-border hover:border-ring transition-all duration-300"
           >
             {/* Main Contact */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl font-semibold text-foreground mb-2">
                 Prof. Dr. Most. Nasrin Akhter
               </h3>
-              <p className="text-green-600 font-medium mb-4">Organizing Secretary, ICSHSD-2025</p>
-              <div className="h-1 w-20 bg-green-600/20 rounded-full mb-6" />
+              <p className="text-primary font-medium mb-4">Organizing Secretary, ICSHSD-2025</p>
+              <div className="h-1 w-20 bg-primary/20 rounded-full mb-6" />
             </div>
 
             {/* Contact Details Grid */}
@@ -31,7 +29,7 @@ export default function ContactUs() {
                 {/* Phone */}
                 <div className="flex items-start space-x-3">
                   <svg
-                    className="w-6 h-6 text-green-600 mt-1"
+                    className="w-6 h-6 text-primary mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -44,16 +42,16 @@ export default function ContactUs() {
                     />
                   </svg>
                   <div>
-                    <p className="font-medium text-gray-700">Phone</p>
-                    <p className="text-gray-600">+88-02-49274034-53, Extn: 5015</p>
-                    <p className="text-gray-600">Cell: +8801749288044</p>
+                    <p className="font-medium text-primary">Phone</p>
+                    <p className="text-muted-foreground">+88-02-49274034-53, Extn: 5015</p>
+                    <p className="text-muted-foreground">Cell: +8801749288044</p>
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-start space-x-3">
                   <svg
-                    className="w-6 h-6 text-green-600 mt-1"
+                    className="w-6 h-6 text-primary mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -66,9 +64,9 @@ export default function ContactUs() {
                     />
                   </svg>
                   <div>
-                    <p className="font-medium text-gray-700">Email</p>
-                    <p className="text-gray-600">nasrin@duet.ac.bd</p>
-                    <p className="text-gray-600">icshsd@duet.ac.bd</p>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">nasrin@duet.ac.bd</p>
+                    <p className="text-muted-foreground">icshsd@duet.ac.bd</p>
                   </div>
                 </div>
               </div>
@@ -78,7 +76,7 @@ export default function ContactUs() {
                 {/* Location */}
                 <div className="flex items-start space-x-3">
                   <svg
-                    className="w-6 h-6 text-green-600 mt-1"
+                    className="w-6 h-6 text-primary mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -97,17 +95,19 @@ export default function ContactUs() {
                     />
                   </svg>
                   <div>
-                    <p className="font-medium text-gray-700">Address</p>
-                    <p className="text-gray-600">Room: 112, Old Academic Building,</p>
-                    <p className="text-gray-600">Dhaka University of Engineering & Technology,</p>
-                    <p className="text-gray-600">DUET, Gazipur, Bangladesh.</p>
+                    <p className="font-medium text-foreground">Address</p>
+                    <p className="text-muted-foreground">Room: 112, Old Academic Building,</p>
+                    <p className="text-muted-foreground">
+                      Dhaka University of Engineering & Technology,
+                    </p>
+                    <p className="text-muted-foreground">DUET, Gazipur, Bangladesh.</p>
                   </div>
                 </div>
 
                 {/* Website */}
                 <div className="flex items-start space-x-3">
                   <svg
-                    className="w-6 h-6 text-green-600 mt-1"
+                    className="w-6 h-6 text-primary mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -120,10 +120,10 @@ export default function ContactUs() {
                     />
                   </svg>
                   <div>
-                    <p className="font-medium text-gray-700">Website</p>
+                    <p className="font-medium text-foreground">Website</p>
                     <a
                       href="http://icshsd.com/"
-                      className="text-green-600 hover:text-green-700 transition-colors duration-200"
+                      className="text-primary hover:text-ring transition-colors duration-200"
                     >
                       http://icshsd.com/
                     </a>

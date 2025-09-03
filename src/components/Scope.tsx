@@ -56,7 +56,7 @@ const scopes: Scopes[] = [
 
 export default function Scopes() {
   return (
-    <section className="py-12 md:py-20 lg:py-28 bg-background">
+    <section className="pb-12 md:py-20 lg:pb-16 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-foreground">
           Thematic Areas of Conference
@@ -85,7 +85,7 @@ export default function Scopes() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] transition-opacity duration-500 group-hover:bg-black/10" />
+                  <div className="absolute inset-0 bg-black/20 dark:bg-white/10 backdrop-blur-[2px] transition-opacity duration-500 group-hover:bg-black/10 dark:group-hover:bg-white/5" />
                 </div>
               </div>
 

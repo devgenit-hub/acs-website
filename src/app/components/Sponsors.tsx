@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+import { useTheme } from '@/providers/theme-provider';
 
 interface Sponsor {
   imageUrl: string;
@@ -34,10 +36,13 @@ const sponsors: Sponsor[] = [
 ];
 
 export default function Sponsors() {
+  const { theme } = useTheme();
+  const gradientColor = theme === 'dark' ? '#0a1624' : '#ffffff';
+
   return (
     <section className="py-12 md:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-green-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
           Our Sponsors
         </h2>
 
@@ -45,7 +50,7 @@ export default function Sponsors() {
           <Marquee
             speed={40}
             gradient={true}
-            gradientColor="#f8fafc"
+            gradientColor={gradientColor}
             gradientWidth={50}
             pauseOnHover={true}
           >
@@ -61,7 +66,7 @@ export default function Sponsors() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <p className="mt-4 text-lg font-medium text-gray-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="mt-4 text-lg font-medium text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {sponsor.name}
                 </p>
               </div>

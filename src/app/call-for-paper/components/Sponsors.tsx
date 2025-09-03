@@ -62,68 +62,153 @@ const sponsorCategories: SponsorCategory[] = [
 
 export default function Sponsors() {
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-white to-gray-100">
+    <section className="py-12 md:py-16 lg:py-20 px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary/80 
+                         bg-clip-text text-primary mb-4 px-2"
+          >
             Sponsors
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-muted-foreground max-w-3xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed px-4">
             We greatly acknowledge any type of sponsorship support and encouragement from our
             sponsors.
           </p>
         </div>
 
         {/* Sponsor Categories */}
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16 lg:space-y-20">
           {sponsorCategories.map((category, idx) => (
-            <div key={idx} className="space-y-8">
+            <div key={idx} className="space-y-6 md:space-y-8">
               {/* Category Header */}
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-green-700 inline-block relative">
+              <div className="text-center px-4">
+                <h3
+                  className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary 
+                              inline-block relative group/title"
+                >
                   {category.title}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-green-100 rounded-full -mb-2" />
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r 
+                                 from-primary/20 to-accent/20 rounded-full -mb-2
+                                 group-hover/title:from-primary/40 group-hover/title:to-accent/40
+                                 transition-all duration-300"
+                  />
                 </h3>
                 {category.description && (
-                  <p className="text-gray-600 mt-2">{category.description}</p>
+                  <p className="text-muted-foreground mt-2 text-sm md:text-base">
+                    {category.description}
+                  </p>
                 )}
               </div>
 
-              {/* Sponsors Grid */}
-              <div className="flex justify-center w-full">
-                <div className="flex flex-wrap justify-center gap-8 w-full">
+              {/* Sponsors Grid - Responsive Layout */}
+              <div className="flex justify-center px-2 md:px-4">
+                <div
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                               gap-4 md:gap-6 lg:gap-8 justify-items-center place-items-center
+                               max-w-fit mx-auto"
+                >
                   {category.sponsors.map((sponsor, index) => (
                     <div
                       key={index}
-                      className="group bg-white/70 backdrop-blur-sm rounded-xl p-6 
-                                border border-green-100 hover:border-green-200 
-                                shadow-lg hover:shadow-xl transition-all duration-300
-                                w-full max-w-sm"
+                      className="group bg-card/70 backdrop-blur-sm rounded-xl p-4 md:p-6 
+                                border border-border hover:border-primary/30 
+                                shadow-lg hover:shadow-xl transition-all duration-500 ease-out
+                                w-full max-w-sm hover:transform hover:scale-[1.03] hover:-translate-y-2
+                                hover:bg-card/90"
+                      style={{ transitionDelay: `${index * 100}ms` }}
                     >
-                      <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
-                        <Image
-                          src={sponsor.imageUrl}
-                          alt={sponsor.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
+                      {/* Background gradient overlay */}
+                      <div
+                        className="absolute inset-0 rounded-xl bg-gradient-to-br 
+                                     from-primary/5 to-accent/5 opacity-0 
+                                     group-hover:opacity-100 transition-opacity duration-500"
+                      />
+
+                      <div className="relative z-10">
+                        {/* Image Container */}
                         <div
-                          className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent 
-                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        />
+                          className="aspect-square relative mb-4 rounded-lg overflow-hidden 
+                                       shadow-md group-hover:shadow-lg transition-shadow duration-300"
+                        >
+                          <Image
+                            src={sponsor.imageUrl}
+                            alt={sponsor.name}
+                            fill
+                            className="object-cover transition-transform duration-700 ease-out 
+                                      group-hover:scale-110"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                          />
+                          {/* Image Overlay */}
+                          <div
+                            className="absolute inset-0 bg-gradient-to-t from-primary/60 
+                                         via-primary/20 to-transparent opacity-0 
+                                         group-hover:opacity-100 transition-opacity duration-500"
+                          />
+
+                          {/* Hover Content Overlay */}
+                          <div
+                            className="absolute inset-0 flex items-center justify-center 
+                                         opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          >
+                            <div
+                              className="bg-background/90 backdrop-blur-sm rounded-lg px-3 py-1
+                                           transform translate-y-4 group-hover:translate-y-0 
+                                           transition-transform duration-300"
+                            >
+                              <span className="text-xs md:text-sm font-medium text-primary">
+                                View Details
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Sponsor Info */}
+                        <div className="space-y-2">
+                          <h4
+                            className="text-lg md:text-xl font-semibold text-foreground 
+                                        group-hover:text-primary transition-colors duration-300
+                                        group-hover:transform group-hover:translate-x-1"
+                          >
+                            {sponsor.name}
+                          </h4>
+                          {sponsor.description && (
+                            <p
+                              className="text-muted-foreground text-sm md:text-base 
+                                         group-hover:text-foreground/90 transition-colors duration-300
+                                         group-hover:transform group-hover:translate-x-1"
+                              style={{ transitionDelay: '100ms' }}
+                            >
+                              {sponsor.description}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Decorative Elements */}
+                        <div className="mt-4 flex justify-center">
+                          <div
+                            className="w-12 h-0.5 bg-gradient-to-r from-transparent 
+                                         via-primary/30 to-transparent group-hover:via-accent/50
+                                         group-hover:w-16 transition-all duration-300"
+                          />
+                        </div>
                       </div>
-                      <h4 className="text-xl font-semibold text-gray-800 group-hover:text-green-700 transition-colors duration-300">
-                        {sponsor.name}
-                      </h4>
-                      {sponsor.description && (
-                        <p className="text-gray-600 mt-2">{sponsor.description}</p>
-                      )}
                     </div>
                   ))}
                 </div>
               </div>
+
+              {/* Category Divider */}
+              {idx < sponsorCategories.length - 1 && (
+                <div className="flex justify-center mt-12 md:mt-16">
+                  <div
+                    className="w-24 md:w-32 lg:w-40 h-px bg-gradient-to-r 
+                                 from-transparent via-border to-transparent"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>

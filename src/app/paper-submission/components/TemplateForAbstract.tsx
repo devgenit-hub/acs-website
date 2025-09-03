@@ -1,13 +1,16 @@
 export default function TemplateForAbstract() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-10">
-      <h2 className="text-2xl md:text-3xl font-bold text-green-600 text-center mb-6">
-        Template for Abstract
-      </h2>
+    <section className="max-w-3xl mx-auto px-6 py-12">
+      {/* Header */}
+      <h2 className="text-3xl font-bold text-center text-primary mb-8">Template for Abstract</h2>
 
+      {/* Download Link */}
       <div className="text-center mt-10">
-        <a href="#" className="text-green-600 font-bold text-xl hover:underline">
-          Click Here to download the Template
+        <a
+          href="#"
+          className="inline-block text-accent font-bold text-xl hover:text-accent/80 transition-colors"
+        >
+          Click Here to Download the Template
         </a>
       </div>
     </section>

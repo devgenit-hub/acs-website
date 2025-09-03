@@ -59,7 +59,7 @@ const HeroCarousel: FC = () => {
                   <span className="ml-1 md:ml-2 line-through opacity-75 text-xs sm:text-sm md:text-base">
                     10th August, 2025
                   </span>
-                  <span className="ml-1 md:ml-2 text-yellow-300 font-semibold text-xs sm:text-sm md:text-base">
+                  <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
                     25th August, 2025
                   </span>
                 </div>
@@ -152,10 +152,10 @@ const Actions = () => {
 
       {/* Call to Action Buttons */}
       <div className="flex flex-wrap grow-0  gap-4 justify-center">
-        <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
           Template for Abstract
         </button>
-        <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
           Submit Abstract Now
         </button>
       </div>

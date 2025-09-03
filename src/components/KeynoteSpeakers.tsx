@@ -66,9 +66,9 @@ const speakers: Speaker[] = [
 
 export default function KeynoteSpeakers() {
   return (
-    <section className="py-12 md:py-20 lg:py-28 bg-background">
+    <section className="pb-10 md:pb-12 lg:pb-16 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-green-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-primary">
           Keynote Speakers
         </h2>
 
@@ -92,7 +92,7 @@ export default function KeynoteSpeakers() {
                 <h3 className="text-xl md:text-2xl font-bold text-foreground">{speaker.name}</h3>
                 <p className="text-lg font-semibold text-primary">{speaker.title}</p>
                 {speaker.department && (
-                  <p className="text-base text-muted-foreground bg-green-600/10 px-4 py-2 rounded-full">
+                  <p className="text-base text-muted-foreground bg-foreground/10 px-4 py-2 rounded-full">
                     {speaker.department}
                   </p>
                 )}

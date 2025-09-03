@@ -21,9 +21,9 @@ const partners: Partner[] = [
 
 export default function PublicationPartner() {
   return (
-    <section className="py-12 md:py-20 lg:py-24 bg-background">
+    <section className="pb-10 md:pb-12 lg:pb-16 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-green-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
           Publication Partner
         </h2>
 
@@ -31,7 +31,7 @@ export default function PublicationPartner() {
           {partners.map((partner, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center p-6 rounded-2xl bg-white/50 hover:bg-white/80 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="flex flex-col items-center p-6 rounded-2xl bg-card hover:bg-secondary transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6">
                 <Image
@@ -43,8 +43,8 @@ export default function PublicationPartner() {
                 />
               </div>
               <div className="text-center space-y-2">
-                <h3 className="text-xl md:text-2xl font-bold text-green-600">{partner.name}</h3>
-                <p className="text-lg text-gray-600">{partner.description}</p>
+                <h3 className="text-xl md:text-2xl font-bold text-primary">{partner.name}</h3>
+                <p className="text-lg text-muted-foreground">{partner.description}</p>
               </div>
             </div>
           ))}
