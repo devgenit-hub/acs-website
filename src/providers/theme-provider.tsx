@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-export type Theme = 'light' | 'dark' | 'brand';
+export type Theme = 'light' | 'dark';
 
 type ThemeContextValue = {
   theme: Theme;
@@ -40,7 +40,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       isDark: theme === 'dark',
       switchTheme: (next?: Theme) => {
         if (next) return setTheme(next);
-        const order: Theme[] = ['light', 'dark', 'brand'];
+        const order: Theme[] = ['light', 'dark'];
         const idx = order.indexOf(theme);
         setTheme(order[(idx + 1) % order.length]);
       },
