@@ -5,8 +5,8 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { AppProvider } from '@/context/app-context';
 import { LocaleProvider } from '@/providers/locale-provider';
 import { siteConfig } from '@/config/site';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

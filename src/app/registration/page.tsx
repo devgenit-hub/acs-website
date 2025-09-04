@@ -1,11 +1,9 @@
-import MainSection from './components/MainSection';
-import RegistrationProcess from './components/RegistrationProcess';
+import Registration from '@/pages/Registration';
 
 export default function page() {
   return (
     <>
-      <MainSection />
-      <RegistrationProcess />
+      <Registration />
     </>
   );
 }

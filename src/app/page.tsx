@@ -1,19 +1,9 @@
-import Scope from '../components/Scope';
-import HeroCarousel from './components/HeroCarousel';
-import KeynoteSpeakers from '../components/KeynoteSpeakers';
-import PublicationPartner from './components/PublicationPartner';
-import Sponsors from './components/Sponsors';
-import WelcomeMessage from './components/WelcomeMessage';
+import HomePage from '@/pages/HomePage';
 
 export default function Home() {
   return (
     <>
-      <HeroCarousel />
-      <WelcomeMessage />
-      <Scope />
-      <KeynoteSpeakers />
-      <PublicationPartner />
-      <Sponsors />
+      <HomePage />
     </>
   );
 }

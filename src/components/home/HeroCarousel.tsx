@@ -35,7 +35,7 @@ const images: Images[] = [
 const HeroCarousel: FC = () => {
   return (
     <div>
-      <div className="w-full relative">
+      <div className="w-full min-h-screen relative">
         {/* Fixed Text Overlay */}
         <div className="absolute top-0 left-[50px] right-[50px] h-full flex items-center justify-center z-10 pointer-events-none">
           <div className="text-center text-white sm:px-6 max-w-6xl pointer-events-auto">
@@ -95,7 +95,7 @@ const HeroCarousel: FC = () => {
           infiniteLoop={true}
           autoPlay={true}
           interval={5000}
-          className="max-h-[600px]"
+          className="h-full"
           renderArrowPrev={(clickHandler) => (
             <button
               onClick={clickHandler}
@@ -114,7 +114,7 @@ const HeroCarousel: FC = () => {
           )}
         >
           {images.map((image, idx) => (
-            <div key={idx} className="relative h-[600px]">
+            <div key={idx} className="relative min-h-screen">
               <div className="absolute inset-0 bg-black/60 z-[1]" />
               <Image
                 src={image.link}
