@@ -17,8 +17,6 @@ const links: Links[] = [
   { text: 'Important Dates', link: '/important-dates' },
   { text: 'Registration', link: '/registration' },
   { text: 'Paper Submission', link: '/paper-submission' },
-  { text: 'Committee', link: '/committee' },
-  { text: 'Keynote Speakers', link: '/keynote-speakers' },
 ];
 
 export default function Navbar() {
