@@ -160,11 +160,11 @@ export default function ConferenceProceedings() {
           >
             <div className="relative">
               <div
-                className="absolute inset-0 rounded-xl bg-gradient-to-r from-accent/5 to-primary/5 
+                className="absolute inset-0 rounded-xl bg-gradient-to-l from-accent/5 to-primary/5 
                              opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
               <p
-                className="relative z-10 text-muted-foreground group-hover:text-foreground/90 
+                className="relative z-10 p-4 text-muted-foreground group-hover:text-foreground/90 
                            transition-colors duration-300"
               >
                 <span

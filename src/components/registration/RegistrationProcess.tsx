@@ -70,14 +70,14 @@ const registrationFees: RegistrationFees[] = [
 
 export default function RegistrationProcess() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-6 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Registration Process
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          <p className="text-muted-foreground max-w-2xl mx-auto px-4">
             Complete your registration by selecting your category and following the payment
             instructions below.
           </p>

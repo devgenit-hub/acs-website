@@ -72,7 +72,7 @@ export default function Sponsors() {
           >
             Sponsors
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed px-4">
+          <p className="text-muted-foreground max-w-3xl mx-auto  leading-relaxed px-4">
             We greatly acknowledge any type of sponsorship support and encouragement from our
             sponsors.
           </p>
@@ -180,7 +180,7 @@ export default function Sponsors() {
                           </h4>
                           {sponsor.description && (
                             <p
-                              className="text-muted-foreground text-sm md:text-base 
+                              className="text-muted-foreground
                                          group-hover:text-foreground/90 transition-colors duration-300
                                          group-hover:transform group-hover:translate-x-1
                                          text-center"

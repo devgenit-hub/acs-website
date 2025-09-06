@@ -44,7 +44,7 @@ export default function PublicationPartner() {
               </div>
               <div className="text-center space-y-2">
                 <h3 className="text-xl md:text-2xl font-bold text-primary">{partner.name}</h3>
-                <p className="text-lg text-muted-foreground">{partner.description}</p>
+                <p className="text-muted-foreground">{partner.description}</p>
               </div>
             </div>
           ))}

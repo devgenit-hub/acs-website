@@ -3,7 +3,7 @@ export default function MainSection() {
     <section className="py-16 px-4 bg-gradient-to-br from-background to-muted">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Conference Registration
           </h2>

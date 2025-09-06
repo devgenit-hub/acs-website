@@ -81,7 +81,7 @@ const HeroCarousel: FC = () => {
               </div>
             </div>
 
-            <div className="hidden md:inline-block">
+            <div className="hidden xl:inline-block">
               <Actions />
             </div>
           </div>
@@ -129,7 +129,7 @@ const HeroCarousel: FC = () => {
         </Carousel>
       </div>
 
-      <div className="md:hidden w-full mx-auto">
+      <div className="xl:hidden w-full mx-auto mt-16">
         <Actions />
       </div>
     </div>
@@ -140,10 +140,10 @@ export default HeroCarousel;
 
 const Actions = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-16 md:py-0 px-5 text-center">
+    <div className="flex flex-col justify-center items-center px-5 text-center">
       {/* Conference Date Highlight */}
       <div className="mb-8">
-        <div className="inline-block bg-black/60 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4">
+        <div className="inline-block bg-black/60 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
           <span className="text-lg md:text-xl font-bold">
             Conference Date: 23-24th October, 2025
           </span>

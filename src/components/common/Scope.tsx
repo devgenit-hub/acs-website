@@ -98,9 +98,7 @@ export default function Scopes() {
                   {scope.description.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="mt-1.5 text-primary">•</span>
-                      <span className="text-base md:text-lg lg:text-xl leading-relaxed">
-                        {item}
-                      </span>
+                      <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
