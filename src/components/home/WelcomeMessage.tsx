@@ -3,7 +3,9 @@ export default function WelcomeMessage() {
     <div className="pt-16">
       <div className="container mx-auto px-4">
         <div className="bg-background text-card-foreground rounded-xl border border-border shadow-lg flex flex-col gap-5 p-8 md:p-12">
-          <h1 className="text-3xl text-primary font-bold text-center w-full">Welcome Message</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
+            Welcome Message
+          </h1>
           <div className="flex flex-col gap-5 text-justify text-muted-foreground">
             <p>
               We are delighted to invite you to the 1st International Conference on Science and

@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
-import { useTheme } from '@/providers/theme-provider';
 
 interface Sponsor {
   imageUrl: string;
@@ -36,9 +35,6 @@ const sponsors: Sponsor[] = [
 ];
 
 export default function Sponsors() {
-  const { theme } = useTheme();
-  const gradientColor = theme === 'dark' ? '#0a1624' : '#ffffff';
-
   return (
     <section className="py-12 md:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
@@ -50,7 +46,7 @@ export default function Sponsors() {
           <Marquee
             speed={40}
             gradient={true}
-            gradientColor={gradientColor}
+            gradientColor={'#ffffff'}
             gradientWidth={50}
             pauseOnHover={true}
           >

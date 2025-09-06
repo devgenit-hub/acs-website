@@ -56,7 +56,7 @@ export default function ImportantDatesPage() {
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-4">
               Important Dates
             </h1>
             <p className="text-muted-foreground max-w-3xl mx-auto">

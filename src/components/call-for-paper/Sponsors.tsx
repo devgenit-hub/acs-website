@@ -103,12 +103,13 @@ export default function Sponsors() {
                 )}
               </div>
 
-              {/* Sponsors Grid - Responsive Layout */}
-              <div className="flex justify-center px-2 md:px-4">
+              {/* Sponsors Grid - Fixed Alignment */}
+              <div className="w-full">
                 <div
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
-                               gap-4 md:gap-6 lg:gap-8 justify-between items-center place-items-center
-                               max-w-fit mx-auto"
+                             gap-4 md:gap-6 lg:gap-8 
+                             justify-items-center items-stretch
+                             px-4 md:px-8"
                 >
                   {category.sponsors.map((sponsor, index) => (
                     <div
@@ -116,7 +117,8 @@ export default function Sponsors() {
                       className="group bg-card/70 backdrop-blur-sm rounded-xl p-4 md:p-6 
                                 border border-border hover:border-primary/30 
                                 shadow-lg hover:shadow-xl transition-all duration-500 ease-out
-                                w-full max-w-sm hover:transform hover:scale-[1.03] hover:-translate-y-2
+                                w-full max-w-sm min-h-[300px] flex flex-col
+                                hover:transform hover:scale-[1.03] hover:-translate-y-2
                                 hover:bg-card/90"
                       style={{ transitionDelay: `${index * 100}ms` }}
                     >
@@ -127,11 +129,12 @@ export default function Sponsors() {
                                      group-hover:opacity-100 transition-opacity duration-500"
                       />
 
-                      <div className="relative z-10">
+                      <div className="relative z-10 flex flex-col h-full">
                         {/* Image Container */}
                         <div
                           className="aspect-square relative mb-4 rounded-lg overflow-hidden 
-                                       shadow-md group-hover:shadow-lg transition-shadow duration-300"
+                                       shadow-md group-hover:shadow-lg transition-shadow duration-300
+                                       flex-shrink-0"
                         >
                           <Image
                             src={sponsor.imageUrl}
@@ -165,12 +168,13 @@ export default function Sponsors() {
                           </div>
                         </div>
 
-                        {/* Sponsor Info */}
-                        <div className="space-y-2">
+                        {/* Sponsor Info - Flexible content area */}
+                        <div className="space-y-2 flex-grow flex flex-col justify-center">
                           <h4
                             className="text-lg md:text-xl font-semibold text-foreground 
                                         group-hover:text-primary transition-colors duration-300
-                                        group-hover:transform group-hover:translate-x-1"
+                                        group-hover:transform group-hover:translate-x-1
+                                        text-center"
                           >
                             {sponsor.name}
                           </h4>
@@ -178,7 +182,8 @@ export default function Sponsors() {
                             <p
                               className="text-muted-foreground text-sm md:text-base 
                                          group-hover:text-foreground/90 transition-colors duration-300
-                                         group-hover:transform group-hover:translate-x-1"
+                                         group-hover:transform group-hover:translate-x-1
+                                         text-center"
                               style={{ transitionDelay: '100ms' }}
                             >
                               {sponsor.description}
@@ -187,7 +192,7 @@ export default function Sponsors() {
                         </div>
 
                         {/* Decorative Elements */}
-                        <div className="mt-4 flex justify-center">
+                        <div className="mt-4 flex justify-center flex-shrink-0">
                           <div
                             className="w-12 h-0.5 bg-gradient-to-r from-transparent 
                                          via-primary/30 to-transparent group-hover:via-accent/50

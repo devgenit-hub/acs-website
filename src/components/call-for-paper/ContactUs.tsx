@@ -4,7 +4,9 @@ export default function ContactUs() {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold bg-clip-text text-primary mb-4">Contact Information</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary mb-4">
+            Contact Information
+          </h2>
         </div>
 
         {/* Contact Card */}

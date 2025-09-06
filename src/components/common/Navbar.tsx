@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
@@ -21,6 +22,16 @@ const links: Links[] = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActiveRoute = (linkPath: string) => {
+    if (!pathname) return false;
+
+    if (linkPath === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(linkPath);
+  };
 
   return (
     <nav className="w-full bg-primary text-primary-foreground shadow-md">
@@ -36,7 +47,9 @@ export default function Navbar() {
             <Link
               key={idx}
               href={link.link}
-              className="transition-opacity hover:opacity-80 px-3 py-1 rounded font-medium"
+              className={`transition-all hover:opacity-80 px-3 py-1 rounded font-medium ${
+                isActiveRoute(link.link) ? 'text-accent font-semibold' : 'text-primary-foreground'
+              }`}
             >
               {link.text}
             </Link>
@@ -61,7 +74,11 @@ export default function Navbar() {
               <Link
                 key={idx}
                 href={link.link}
-                className="py-3 w-full text-center hover:text-primary transition-colors font-medium"
+                className={`py-3 w-full text-center hover:text-primary transition-colors font-medium ${
+                  isActiveRoute(link.link)
+                    ? 'text-accent font-semibold'
+                    : 'text-secondary-foreground'
+                }`}
                 onClick={() => setOpen(false)}
               >
                 {link.text}
