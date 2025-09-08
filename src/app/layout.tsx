@@ -5,6 +5,8 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { AppProvider } from '@/context/app-context';
 import { LocaleProvider } from '@/providers/locale-provider';
 import { siteConfig } from '@/config/site';
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,12 +42,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>
           <LocaleProvider>
-            <AppProvider>{children}</AppProvider>
+            <AppProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </AppProvider>
           </LocaleProvider>
         </ThemeProvider>
       </body>
