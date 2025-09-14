@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  MdOutlineAssignment,
-  MdOutlineNotifications,
-  MdOutlineVerified,
-  MdOutlineCalendarToday,
-  MdRocketLaunch,
-} from 'react-icons/md';
+import { MdHowToReg, MdDescription, MdMarkEmailRead, MdEvent } from 'react-icons/md';
 
 interface Dates {
   id: number;
@@ -18,34 +12,27 @@ interface Dates {
 const dates: Dates[] = [
   {
     id: 1,
-    title: 'Abstract Submission Deadline',
-    date: '05th September, 2025',
-    icon: <MdOutlineAssignment className="w-10 h-10 text-primary" />,
-    strikethrough: ['10th August, 2025', '25th August, 2025'],
+    title: 'Registration Deadline',
+    date: '1 November, 2025',
+    icon: <MdHowToReg className="w-10 h-10 text-primary" />,
   },
   {
     id: 2,
-    title: 'Notification of Acceptance',
-    date: '10th September, 2025',
-    icon: <MdOutlineNotifications className="w-10 h-10 text-primary" />,
+    title: 'Abstract Submission Deadline',
+    date: '20 November, 2025',
+    icon: <MdDescription className="w-10 h-10 text-primary" />,
   },
   {
     id: 3,
-    title: 'Camera Ready Paper Submission Deadline',
-    date: '20th September, 2025',
-    icon: <MdOutlineVerified className="w-10 h-10 text-primary" />,
+    title: 'Notification of Acceptance',
+    date: '1 December, 2025',
+    icon: <MdMarkEmailRead className="w-10 h-10 text-primary" />,
   },
   {
     id: 4,
-    title: 'Registration Deadline',
-    date: '1st October, 2025',
-    icon: <MdOutlineCalendarToday className="w-10 h-10 text-primary" />,
-  },
-  {
-    id: 5,
     title: 'Conference Date',
-    date: '23-24th October, 2025',
-    icon: <MdRocketLaunch className="w-10 h-10 text-primary" />,
+    date: '19 December, 2025',
+    icon: <MdEvent className="w-10 h-10 text-primary" />,
   },
 ];
 

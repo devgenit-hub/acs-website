@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden lg:flex gap-6">
           {links.map((link, idx) => (
             <Link
               key={idx}
@@ -58,7 +58,7 @@ export default function Navbar() {
 
         {/* Hamburger Icon */}
         <button
-          className="md:hidden flex items-center p-2 focus:outline-none"
+          className="lg:hidden flex items-center p-2 focus:outline-none"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -68,7 +68,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-secondary text-secondary-foreground shadow-inner">
+        <div className="lg:hidden bg-secondary text-secondary-foreground shadow-inner">
           <div className="flex flex-col items-center py-2">
             {links.map((link, idx) => (
               <Link

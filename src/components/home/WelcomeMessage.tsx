@@ -8,28 +8,17 @@ export default function WelcomeMessage() {
           </h1>
           <div className="flex flex-col gap-5 text-justify text-muted-foreground">
             <p>
-              We are delighted to invite you to the 1st International Conference on Science and
-              Humanities for Sustainable Development (ICSHSD- 2025), organized by the Faculty of
-              Science, Dhaka University of Engineering & Technology (DUET), Gazipur. This conference
-              highlights the crucial role of Science and Humanities in advancing Modern Science,
-              Engineering, Technology, and Sustainable Development.
-            </p>
-            <p>
-              The Departments of Mathematics, Physics, and Chemistry drive innovation through
-              computational modeling, data science, numerical simulations, advanced materials,
-              semiconductor technology, photonics, nanotechnology, chemical engineering, and
-              sustainable energy systems, with applications in AI, robotics, aerospace, electronics,
-              healthcare, and industrial process optimization. The Department of Humanities & Social
-              Sciences explores language and education, business and entrepreneurship, Economic
-              policy design etc. for sustainable development. This conference offers an excellent
-              opportunity for students to learn from experts in various fields of Science,
-              Engineering, and Humanities.
-            </p>
-            <p>
-              ICSHSD- 2025 provides both online and offline platforms for researchers, engineers,
-              and academics to exchange ideas, foster collaboration, and contribute to global
-              scientific and technological advancements. We look forward to your participation in
-              this exciting event.
+              We are delighted to invite you to the 1st International Conference on Environmental
+              Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025), organized
+              by American Chemical Society (ACS) Student Chapter, University of Dhaka, Dhaka. This
+              conference highlights the crucial role of Chemistry in advancing Modern Science,
+              Engineering, Technology, and Sustainable Development. The aim of this conference is to
+              Promote green chemistry awareness, showcase innovative solutions, strengthen ACS
+              student chapter collaborations and provide industry with sustainable alternatives.
+              Join us at ICESGE-2025, where we&quot;ve created a versatile platform—accessible both
+              online and offline—for researchers, engineers, and academics like you. It&quot;s a
+              fantastic opportunity to connect, share your work, and help to shape the future of
+              science and technology. We can&quot;t wait to see you there!
             </p>
           </div>
         </div>

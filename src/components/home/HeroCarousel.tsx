@@ -40,43 +40,37 @@ const HeroCarousel: FC = () => {
         <div className="absolute top-0 left-[50px] right-[50px] h-full flex items-center justify-center z-10 pointer-events-none">
           <div className="text-center text-white sm:px-6 max-w-6xl pointer-events-auto">
             {/* Main Title */}
-            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
-              1st International Conference on Science and Humanities for Sustainable Development
+            <h1 className="sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
+              1st International Conference on Environmental Sustainability and Green Earth: ACS
+              Bangladesh Youth Summit (ICESGE-2025)
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-xl lg:text-2xl mb-6 md:mb-8 drop-shadow-md font-medium opacity-90">
-              Integrating Science, Technology and Humanities Research for Sustainable Future
+            <p className="text-xs sm:text-base md:text-xl lg:text-2xl mb-6 md:mb-8 drop-shadow-md font-medium opacity-90">
+              Where Youth Leadership and Chemistry Unite for a Greener Earth
             </p>
 
             {/* Important Dates Section */}
             <div className="mb-8 space-y-3">
               <div className="flex flex-col md:flex-row md:justify-center md:gap-8 gap-2">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 md:px-4 py-1.5 md:py-2">
-                  <span className="font-semibold text-xs sm:text-sm md:text-base">
-                    Abstract Submission:
-                  </span>
-                  <span className="ml-1 md:ml-2 line-through opacity-75 text-xs sm:text-sm md:text-base">
-                    10th August, 2025
-                  </span>
-                  <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
-                    25th August, 2025
-                  </span>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
+                  <span className="font-semibold text-sm sm:text-base">Registration Deadline:</span>
+                  <span className="">1 November, 2025</span>
                 </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <span className="font-semibold">Notification:</span>
-                  <span className="ml-2">10th September, 2025</span>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
+                  <span className="font-semibold text-sm sm:text-base">
+                    Abstract Submission Deadline:
+                  </span>
+                  <span className="">20 November, 2025</span>
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row md:justify-center md:gap-8 gap-2 text-sm md:text-base">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <span className="font-semibold">Camera Ready Paper:</span>
-                  <span className="ml-2">20th September, 2025</span>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <span className="font-semibold">Registration:</span>
-                  <span className="ml-2">1st October, 2025</span>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
+                  <span className="font-semibold text-sm sm:text-base">
+                    Notification of Acceptance:
+                  </span>
+                  <span className="">1 December, 2025</span>
                 </div>
               </div>
             </div>
@@ -144,9 +138,12 @@ const Actions = () => {
       {/* Conference Date Highlight */}
       <div className="mb-8">
         <div className="inline-block bg-black/60 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
-          <span className="text-lg md:text-xl font-bold">
-            Conference Date: 23-24th October, 2025
-          </span>
+          <div className="rounded-lg px-3 md:px-4 py-1.5 md:py-2">
+            <span className="font-semibold text-xs sm:text-sm md:text-base">Conference Date:</span>
+            <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
+              19 December, 2025
+            </span>
+          </div>
         </div>
       </div>
 
