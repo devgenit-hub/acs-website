@@ -47,8 +47,8 @@ export default function ImportantDatesPage() {
               Important Dates
             </h1>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              1st International Conference on Science and Humanities for Sustainable Development –
-              ICSHSD
+              1st International Conference on Environmental Sustainability and Green Earth
+              (ICESGE-2025)
             </p>
           </div>
 

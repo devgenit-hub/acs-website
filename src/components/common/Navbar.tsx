@@ -14,7 +14,8 @@ interface Links {
 
 const links: Links[] = [
   { text: 'Home Page', link: '/' },
-  { text: 'Call For Papers', link: '/call-for-paper' },
+  { text: 'Call For Abstract', link: '/call-for-abstract' },
+  { text: 'About Us', link: '/about-us' },
   { text: 'Important Dates', link: '/important-dates' },
   { text: 'Registration', link: '/registration' },
   { text: 'Paper Submission', link: '/paper-submission' },
@@ -35,6 +36,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-primary text-primary-foreground shadow-md">
+      {/* TODO make the navbar sticky */}
       <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

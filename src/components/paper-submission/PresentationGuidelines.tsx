@@ -1,6 +1,6 @@
 export default function PresentationGuidelines() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-12">
+    <section className="container mx-auto max-w-3xl px-6 mb-24">
       {/* Header */}
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-primary mb-8">
         Presentation Guidelines

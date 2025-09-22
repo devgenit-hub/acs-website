@@ -1,3 +1,6 @@
+'use client';
+import { bkash, nagad } from '@/assets';
+import Image from 'next/image';
 import React from 'react';
 import {
   FaCreditCard,
@@ -6,6 +9,7 @@ import {
   FaHashtag,
   FaUser,
   FaUniversity,
+  FaMobileAlt,
 } from 'react-icons/fa';
 
 interface Fees {
@@ -26,32 +30,15 @@ const registrationFees: RegistrationFees[] = [
     fees: [
       {
         type: 'Local',
-        amount: '2500 BDT',
+        amount: '2000 BDT',
         bgColor: 'bg-accent',
         textColor: 'text-accent-foreground',
       },
       {
         type: 'International',
-        amount: '100 USD',
+        amount: '80 USD',
         bgColor: 'bg-primary',
         textColor: 'text-primary-foreground',
-      },
-    ],
-  },
-  {
-    category: 'Authors (Student)',
-    fees: [
-      {
-        type: 'Local',
-        amount: '1500 BDT',
-        bgColor: 'bg-secondary',
-        textColor: 'text-secondary-foreground',
-      },
-      {
-        type: 'International',
-        amount: '50 USD',
-        bgColor: 'bg-muted',
-        textColor: 'text-muted-foreground',
       },
     ],
   },
@@ -60,9 +47,15 @@ const registrationFees: RegistrationFees[] = [
     fees: [
       {
         type: 'Local',
-        amount: '2000 BDT',
-        bgColor: 'bg-destructive/10',
-        textColor: 'text-destructive',
+        amount: '999 BDT',
+        bgColor: 'bg-secondary',
+        textColor: 'text-secondary-foreground',
+      },
+      {
+        type: 'International',
+        amount: '40 USD',
+        bgColor: 'bg-muted',
+        textColor: 'text-muted-foreground',
       },
     ],
   },
@@ -70,7 +63,7 @@ const registrationFees: RegistrationFees[] = [
 
 export default function RegistrationProcess() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
@@ -137,8 +130,8 @@ export default function RegistrationProcess() {
           </div>
 
           <div className="p-8">
-            {/* Bank Logo and Info */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 mb-8">
+            {/* Bank Info */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
               <div className="bg-accent/20 p-6 rounded-xl border-2 border-accent">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-foreground mb-2">
@@ -157,7 +150,7 @@ export default function RegistrationProcess() {
                     <FaUser className="w-5 h-5 text-primary" />
                     <span className="font-semibold text-foreground">Account Name</span>
                   </div>
-                  <p className="text-muted-foreground font-mono font-medium">ICSHSD-2025</p>
+                  <p className="text-muted-foreground font-mono font-medium">ICESGE-2025</p>
                 </div>
 
                 <div className="bg-muted p-4 rounded-lg border border-border">
@@ -181,7 +174,51 @@ export default function RegistrationProcess() {
                     <FaMapMarkerAlt className="w-5 h-5 text-destructive" />
                     <span className="font-semibold text-foreground">Branch Name</span>
                   </div>
-                  <p className="text-muted-foreground font-medium">DUET</p>
+                  <p className="text-muted-foreground font-medium">DU</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Banking Section */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-foreground flex items-center gap-3 mb-6">
+                <FaMobileAlt className="w-6 h-6 text-primary" />
+                Mobile Banking
+              </h3>
+
+              <div className="flex flex-col gap-6">
+                {/* Account Name */}
+                <div className="bg-muted/50 p-4 rounded-lg border border-border col-span-2">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaUser className="w-5 h-5 text-primary" />
+                    <span className="font-semibold text-foreground">
+                      <p>Account Name</p>
+                      <p className="text-muted-foreground font-medium">Md. Rakibur Rahman</p>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6 w-full flex-1">
+                  {/* Bkash */}
+                  <div className="bg-pink-100 p-4 rounded-lg border border-pink-300 flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Image src={bkash} alt="Bkash" className="h-10" />
+                      <span className="font-semibold text-foreground">
+                        <p>Bkash</p>
+                        <p className="text-muted-foreground font-medium">01518618583</p>
+                      </span>
+                    </div>
+                  </div>
+                  {/* Nagad */}
+                  <div className="bg-orange-100 p-4 rounded-lg border border-orange-300 flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Image src={nagad} alt="Nagad" className="h-10" />
+                      <span className="font-semibold text-foreground">
+                        <p>Nagad</p>
+                        <p className="text-muted-foreground font-medium">01518618583</p>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,7 +235,9 @@ export default function RegistrationProcess() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 bg-warning rounded-full mt-2 flex-shrink-0"></span>
-                  <span>Transfer the exact amount to the provided bank account</span>
+                  <span>
+                    Transfer the exact amount to the provided bank account or mobile wallet
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 bg-warning rounded-full mt-2 flex-shrink-0"></span>

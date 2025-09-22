@@ -1,6 +1,6 @@
 export default function MainSection() {
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-background to-muted">
+    <section className="py-24 px-4 bg-gradient-to-br from-background to-muted">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center">

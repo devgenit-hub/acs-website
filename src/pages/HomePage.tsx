@@ -1,8 +1,7 @@
 import KeynoteSpeakers from '@/components/common/KeynoteSpeakers';
-import Scope from '@/components/common/Scope';
+import Scope from '@/components/home/Scope';
 import HeroCarousel from '@/components/home/HeroCarousel';
-import PublicationPartner from '@/components/home/PublicationPartner';
-import Sponsors from '@/components/home/Sponsors';
+import Partners from '@/components/home/Partners';
 import WelcomeMessage from '@/components/home/WelcomeMessage';
 
 export default function HomePage() {
@@ -12,8 +11,7 @@ export default function HomePage() {
       <WelcomeMessage />
       <Scope />
       <KeynoteSpeakers />
-      <PublicationPartner />
-      <Sponsors />
+      <Partners />
     </>
   );
 }

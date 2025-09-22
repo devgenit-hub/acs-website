@@ -3,50 +3,42 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
 import { FC } from 'react';
+import { herocarousel1, herocarousel2, herocarousel3 } from '@/assets';
+import { FiDownload } from 'react-icons/fi';
+import { LuSend } from 'react-icons/lu';
+import './hero.css';
 
 interface Images {
   link: string;
-  alt: string;
 }
 
 const images: Images[] = [
   {
-    link: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba',
-    alt: 'Orange cat with blue eyes looking at camera',
+    link: herocarousel1,
   },
   {
-    link: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4',
-    alt: 'Gray cat relaxing on wooden surface',
+    link: herocarousel2,
   },
   {
-    link: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d',
-    alt: 'Close up of white cat with mesmerizing green eyes',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5',
-    alt: 'Tabby cat sitting gracefully against dark background',
-  },
-  {
-    link: 'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec',
-    alt: 'Curious kitten looking up with playful expression',
+    link: herocarousel3,
   },
 ];
 
 const HeroCarousel: FC = () => {
   return (
-    <div>
+    <section>
       <div className="w-full min-h-screen relative">
         {/* Fixed Text Overlay */}
         <div className="absolute top-0 left-[50px] right-[50px] h-full flex items-center justify-center z-10 pointer-events-none">
           <div className="text-center text-white sm:px-6 max-w-6xl pointer-events-auto">
             {/* Main Title */}
-            <h1 className="sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
+            <h1 className="sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
               1st International Conference on Environmental Sustainability and Green Earth: ACS
               Bangladesh Youth Summit (ICESGE-2025)
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xs sm:text-base md:text-xl lg:text-2xl mb-6 md:mb-8 drop-shadow-md font-medium opacity-90">
+            <p className="text-xs sm:text-base lg:text-xl mb-6 md:mb-8 drop-shadow-md font-medium opacity-90">
               Where Youth Leadership and Chemistry Unite for a Greener Earth
             </p>
 
@@ -112,7 +104,7 @@ const HeroCarousel: FC = () => {
               <div className="absolute inset-0 bg-black/60 z-[1]" />
               <Image
                 src={image.link}
-                alt={image.alt}
+                alt=""
                 fill
                 priority={idx === 0}
                 className="object-cover"
@@ -126,7 +118,7 @@ const HeroCarousel: FC = () => {
       <div className="xl:hidden w-full mx-auto mt-16">
         <Actions />
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -147,12 +139,14 @@ const Actions = () => {
         </div>
       </div>
 
-      {/* Call to Action Buttons */}
-      <div className="flex flex-wrap grow-0  gap-4 justify-center">
-        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+      {/* Call To Action Buttons */}
+      <div className="flex flex-wrap grow-0  gap-8 justify-center">
+        <button className="bg-accent hover:bg-accent/90 text-secondary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg flex items-center gap-2 bling-shadow">
+          <FiDownload />
           Template for Abstract
         </button>
-        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+        <button className="bg-accent hover:bg-accent/90 text-secondary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg flex items-center gap-2 bling-shadow">
+          <LuSend />
           Submit Abstract Now
         </button>
       </div>

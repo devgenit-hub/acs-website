@@ -1,72 +1,41 @@
 'use client';
+import React from 'react';
+import { kynotespeaker1, kynotespeaker2, kynotespeaker3 } from '@/assets';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface Speaker {
   name: string;
   title: string;
   affiliation: string;
-  department?: string;
   imageUrl: string;
 }
 
 const speakers: Speaker[] = [
   {
-    name: 'Dr. Whiskers McFluff, Ph.D',
-    title: 'Chief Napping Officer',
-    affiliation: 'Institute of Purr-fect Studies, Catsville University',
-    imageUrl: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3',
+    name: 'Dr. Mohammad Ismail',
+    title: 'Vice-Chancellor <br/> Noakhali Science and Technology University',
+    affiliation: 'Secretary at ACS Bangladesh Chapter',
+    imageUrl: kynotespeaker1,
   },
   {
-    name: 'Prof. Mittens Pawsome, Ph.D',
-    title: 'Senior Researcher',
-    department: 'Department of Feline Sciences',
-    affiliation: 'Royal Academy of Cat Behavior',
-    imageUrl: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3',
+    name: 'Dr. Mohammad Shahruzzaman',
+    title:
+      'Associate Professor <br/> Applied Chemistry and Chemical Engineering <br/> University of Dhaka',
+    affiliation: 'Faculty Advisor at ACS Student Chapter, DU',
+    imageUrl: kynotespeaker2,
   },
   {
-    name: 'Dr. Luna Purrington, Ph.D',
-    title: 'Head of Treats',
-    affiliation: 'Meow-velous Institute of Technology',
-    imageUrl: 'https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3',
-  },
-  {
-    name: 'Prof. Oliver Whiskerton III, Ph.D',
-    title: 'Distinguished Professor',
-    department: 'Department of Purr Acoustics',
-    affiliation: 'Feline Institute of Technology',
-    imageUrl: 'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3',
-  },
-  {
-    name: 'Dr. Bella Scratchington, Ph.D',
-    title: 'Director of Yarn Studies',
-    affiliation: 'Whisker University',
-    imageUrl: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?ixlib=rb-4.0.3',
-  },
-  {
-    name: 'Prof. Leo Furbottom, Ph.D',
-    title: 'Head of Department',
-    department: 'Department of Mousology',
-    affiliation: 'Pawsford University',
-    imageUrl: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3',
-  },
-  {
-    name: 'Dr. Sasha Meowenstein, Ph.D',
-    title: 'Research Director',
-    affiliation: 'Catzionale Institute of Science',
-    imageUrl: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3',
-  },
-  {
-    name: 'Prof. Felix Whiskersmith, Ph.D',
-    title: 'Executive Director',
-    department: 'Center for Advanced Catnip Studies',
-    affiliation: 'University of Pawington',
-    imageUrl: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3',
+    name: 'Sadit Bihongo Malitha',
+    title: 'Lecturer <br/> Applied Chemistry and Chemical Engineering <br/> University of Dhaka',
+    affiliation: 'Faculty Co-Advisor at ACS Student Chapter, DU',
+    imageUrl: kynotespeaker3,
   },
 ];
 
 export default function KeynoteSpeakers() {
   return (
-    <section className="py-10 md:pb-12 lg:pb-16 bg-background">
+    <section className="pb-10 md:pb-12 lg:pb-16 bg-background mb-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-primary">
           Keynote Speakers
@@ -74,11 +43,21 @@ export default function KeynoteSpeakers() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
           {speakers.map((speaker, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex flex-col items-center text-center space-y-4 p-6 rounded-2xl hover:bg-muted/50 transition-colors"
+              className="flex flex-col items-center text-center p-6 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-xl hover:border-primary/40 hover:shadow-2xl transition-all duration-300 h-full"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20">
+              {/* Image */}
+              <motion.div
+                className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/30 shadow-md mb-6"
+                whileHover={{ rotate: 3, scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+              >
                 <Image
                   src={speaker.imageUrl}
                   alt={speaker.name}
@@ -86,19 +65,40 @@ export default function KeynoteSpeakers() {
                   className="object-cover"
                   sizes="(max-width: 768px) 192px, 224px"
                 />
-              </div>
+              </motion.div>
 
-              <div className="space-y-2">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">{speaker.name}</h3>
-                <p className="text-lg font-semibold text-primary">{speaker.title}</p>
-                {speaker.department && (
-                  <p className="text-base text-muted-foreground bg-foreground/10 px-4 py-2 rounded-full">
-                    {speaker.department}
-                  </p>
-                )}
-                <p className="text-base text-muted-foreground">{speaker.affiliation}</p>
+              {/* Content */}
+              <div className="flex flex-col items-center flex-grow w-full">
+                {/* Name */}
+                <div className="h-16 flex items-center justify-center mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground text-center drop-shadow-md">
+                    {speaker.name}
+                  </h3>
+                </div>
+
+                {/* Title */}
+                <div className="min-h-[96px] flex items-center justify-center mb-6 flex-grow">
+                  <p
+                    className="text-lg font-semibold text-primary text-center leading-relaxed drop-shadow-sm"
+                    dangerouslySetInnerHTML={{ __html: speaker.title }}
+                  />
+                </div>
+
+                {/* Affiliation */}
+                <motion.div
+                  className="mt-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  {speaker.affiliation && (
+                    <p className="text-sm text-muted-foreground bg-foreground/10 backdrop-blur-md px-4 py-2 rounded-full shadow-sm whitespace-nowrap">
+                      {speaker.affiliation}
+                    </p>
+                  )}
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

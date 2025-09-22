@@ -1,6 +1,6 @@
 export default function WelcomeMessage() {
   return (
-    <div className="pt-16">
+    <section className="pt-16 mb-24">
       <div className="container mx-auto px-4">
         <div className="bg-background text-card-foreground rounded-xl border border-border shadow-lg flex flex-col gap-5 p-8 md:p-12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
@@ -12,9 +12,14 @@ export default function WelcomeMessage() {
               Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025), organized
               by American Chemical Society (ACS) Student Chapter, University of Dhaka, Dhaka. This
               conference highlights the crucial role of Chemistry in advancing Modern Science,
-              Engineering, Technology, and Sustainable Development. The aim of this conference is to
-              Promote green chemistry awareness, showcase innovative solutions, strengthen ACS
-              student chapter collaborations and provide industry with sustainable alternatives.
+              Engineering, Technology, and Sustainable Development.
+            </p>
+            <p>
+              The aim of this conference is to Promote green chemistry awareness, showcase
+              innovative solutions, strengthen ACS student chapter collaborations and provide
+              industry with sustainable alternatives.
+            </p>
+            <p>
               Join us at ICESGE-2025, where we&quot;ve created a versatile platform—accessible both
               online and offline—for researchers, engineers, and academics like you. It&quot;s a
               fantastic opportunity to connect, share your work, and help to shape the future of
@@ -23,6 +28,6 @@ export default function WelcomeMessage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

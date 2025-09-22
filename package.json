@@ -14,6 +14,7 @@
     "reset:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\reset-win.ps1"
   },
   "dependencies": {
+    "framer-motion": "^12.23.18",
     "lucide-react": "^0.542.0",
     "next": "15.5.0",
     "postcss": "^8.5.6",
