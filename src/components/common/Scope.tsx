@@ -1,56 +1,43 @@
 'use client';
+import { che, ec, gc, sustainability } from '@/assets';
 import Image from 'next/image';
 
-interface Scopes {
+interface Scope {
   title: string;
   description: Array<string>;
   imageUrl: string;
 }
 
-const scopes: Scopes[] = [
+const scopes: Scope[] = [
   {
-    title: 'Mathematics',
-    description: [
-      'Pure Mathematics',
-      'Computational Fluid Dynamics (CFD)',
-      'Numerical Heat and Mass Transfer',
-      'Optimization and Operational Research',
-      'Biomathematics and Mathematical Modelling',
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3', // Cat counting/calculating
+    title: 'Sustainability',
+    description: ['Atom Economy', 'Safer Solutions', 'Energy Efficiency', 'Non-Toxic Circularity'],
+    imageUrl: sustainability,
   },
   {
-    title: 'Physics',
-    description: [
-      'Pure Mathematics',
-      'Computational Fluid Dynamics (CFD)',
-      'Numerical Heat and Mass Transfer',
-      'Optimization and Operational Research',
-      'Biomathematics and Mathematical Modelling',
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3', // Cat with curious expression looking at something
+    title: 'Environmental Science',
+    description: ['Atmospheric Chemistry', 'Geo Chemistry', 'Analytical Chemistry', 'Toxicology'],
+    imageUrl: ec,
   },
   {
-    title: 'Chemistry',
+    title: 'Green Chemistry',
     description: [
-      'Pure Mathematics',
-      'Computational Fluid Dynamics (CFD)',
-      'Numerical Heat and Mass Transfer',
-      'Optimization and Operational Research',
-      'Biomathematics and Mathematical Modelling',
+      'Green Earth',
+      'Renewable Feedstocks',
+      'Biomass Utilisation',
+      'Sustainable Energy',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3', // Cat looking like it's experimenting
+    imageUrl: gc,
   },
   {
-    title: 'Humanities & Social Science',
+    title: 'Chemical Engineering',
     description: [
-      'Pure Mathematics',
-      'Computational Fluid Dynamics (CFD)',
-      'Numerical Heat and Mass Transfer',
-      'Optimization and Operational Research',
-      'Biomathematics and Mathematical Modelling',
+      'Reaction Engineering',
+      'Separation Processes',
+      'Nanomaterials, Polymers and Composites',
+      'Bio Process Engineering',
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3', // Cat being social with another cat
+    imageUrl: che,
   },
 ];
 
@@ -71,11 +58,9 @@ export default function Scopes() {
               } gap-8 md:gap-12 lg:gap-16 items-center`}
             >
               {/* Image Container */}
-              <div className="w-full md:w-1/2 relative group">
+              <div className="w-full md:w-1/2 relative">
                 <div
-                  className={`relative h-64 md:h-[400px] rounded-2xl overflow-hidden shadow-xl 
-                    transition-transform duration-500 ease-out hover:scale-[1.02]
-                    ${index % 2 === 0 ? 'rotate-2 hover:rotate-0' : '-rotate-2 hover:rotate-0'}
+                  className={`relative h-64 md:h-[400px] rounded-2xl overflow-hidden transition-transform duration-500 ease-out hover:scale-[1.02] ${index % 2 === 0 ? 'rotate-2 hover:rotate-0' : '-rotate-2 hover:rotate-0'}
                   `}
                 >
                   <Image
@@ -85,7 +70,6 @@ export default function Scopes() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-black/20 dark:bg-white/10 backdrop-blur-[2px] transition-opacity duration-500 group-hover:bg-black/10 dark:group-hover:bg-white/5" />
                 </div>
               </div>
 
