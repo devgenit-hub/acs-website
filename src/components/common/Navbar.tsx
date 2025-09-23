@@ -124,42 +124,54 @@ export default function Navbar() {
           <div className="flex flex-col divide-y divide-border">
             {links.map((link, idx) => (
               <div key={idx} className="w-full">
-                <button
-                  onClick={() =>
-                    link.sublink
-                      ? setDropdownOpen(dropdownOpen === link.text ? null : link.text)
-                      : setOpen(false)
-                  }
-                  className={`flex justify-between items-center w-full px-6 py-3 text-left transition-colors font-medium ${
-                    isActiveRoute(link.link)
-                      ? 'text-accent font-semibold'
-                      : 'text-secondary-foreground'
-                  }`}
-                >
-                  {link.text}
-                  {link.sublink && (
-                    <FiChevronDown
-                      className={`transition-transform duration-300 ${
-                        dropdownOpen === link.text ? 'rotate-180' : 'rotate-0'
+                {link.sublink ? (
+                  <>
+                    {/* Parent Button for dropdown */}
+                    <button
+                      onClick={() => setDropdownOpen(dropdownOpen === link.text ? null : link.text)}
+                      className={`flex justify-between items-center w-full px-6 py-3 text-left transition-colors font-medium ${
+                        isActiveRoute(link.link)
+                          ? 'text-accent font-semibold'
+                          : 'text-secondary-foreground'
                       }`}
-                    />
-                  )}
-                </button>
+                    >
+                      {link.text}
+                      <FiChevronDown
+                        className={`transition-transform duration-300 ${
+                          dropdownOpen === link.text ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      />
+                    </button>
 
-                {/* Mobile Dropdown */}
-                {link.sublink && dropdownOpen === link.text && (
-                  <div className="flex flex-col bg-secondary/90">
-                    {link.sublink.map((sub, subIdx) => (
-                      <Link
-                        key={subIdx}
-                        href={sub.link}
-                        onClick={() => setOpen(false)}
-                        className="py-2 px-10 text-sm hover:bg-secondary/70 transition-colors"
-                      >
-                        {sub.text}
-                      </Link>
-                    ))}
-                  </div>
+                    {/* Mobile Dropdown */}
+                    {dropdownOpen === link.text && (
+                      <div className="flex flex-col bg-secondary/90">
+                        {link.sublink.map((sub, subIdx) => (
+                          <Link
+                            key={subIdx}
+                            href={sub.link}
+                            onClick={() => setOpen(false)}
+                            className="py-2 px-10 text-sm hover:bg-secondary/70 transition-colors"
+                          >
+                            {sub.text}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  // Direct Link for items without sublinks
+                  <Link
+                    href={link.link}
+                    onClick={() => setOpen(false)}
+                    className={`flex justify-between items-center w-full px-6 py-3 text-left transition-colors font-medium ${
+                      isActiveRoute(link.link)
+                        ? 'text-accent font-semibold'
+                        : 'text-secondary-foreground'
+                    }`}
+                  >
+                    {link.text}
+                  </Link>
                 )}
               </div>
             ))}
