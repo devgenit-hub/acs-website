@@ -58,7 +58,7 @@ const partners: Partner[] = [
 
 export default function Partners() {
   return (
-    <section className="bg-background pb-10 md:pb-12 lg:pb-16 mb-24">
+    <section className="bg-background mb-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
           Our Partners

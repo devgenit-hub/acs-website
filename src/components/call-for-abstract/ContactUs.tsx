@@ -1,6 +1,6 @@
 export default function ContactUs() {
   return (
-    <section className="px-4 mb-24">
+    <section className="px-4 mb-24 mt-24">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">

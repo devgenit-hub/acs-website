@@ -1,10 +1,10 @@
 export default function ConferenceProceedings() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-background to-secondary/20">
+    <section className="pt-10 md:pt-16 lg:pt-24 px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary bg-clip-text mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary bg-clip-text mb-10">
             Conference Proceedings
           </h2>
           <p className="text-muted-foreground italic max-w-3xl mx-auto leading-relaxed">
@@ -45,7 +45,7 @@ export default function ConferenceProceedings() {
                               transition-colors duration-300"
                 >
                   Accepted extended abstract will be published in two formats: Abstract Proceedings
-                  and Full Paper e-Proceedings (Based on merit and author preference)
+                  and Full Abstract e-Proceedings (Based on merit and author preference)
                 </p>
 
                 <div className="space-y-6">
@@ -86,7 +86,7 @@ export default function ConferenceProceedings() {
                       className="text-muted-foreground mb-4 group-hover/item:text-foreground/90 
                                  transition-colors duration-300"
                     >
-                      Outstanding and thematically relevant papers will be considered for
+                      Outstanding and thematically relevant abstracts will be considered for
                       publication in special issues of the following peer-reviewed journals, subject
                       to a rigorous review process:
                     </p>
@@ -95,7 +95,8 @@ export default function ConferenceProceedings() {
                                    group-hover/item:text-foreground/90 transition-colors duration-300"
                     >
                       <li className="hover:transform hover:translate-x-1 transition-transform duration-200">
-                        Accepted papers will be considered for publication in a special issue of the{' '}
+                        Accepted abstracts will be considered for publication in a special issue of
+                        the{' '}
                         <span className="font-medium text-primary/90 hover:text-primary transition-colors duration-200">
                           American Chemical Society DU Chapter
                         </span>
@@ -143,7 +144,7 @@ export default function ConferenceProceedings() {
                       className="text-muted-foreground group-hover/item:text-foreground/90 
                                  transition-colors duration-300"
                     >
-                      Full papers will be available as post-conference electronic proceedings.
+                      Full abstracts will be available as post-conference electronic proceedings.
                     </p>
                   </div>
                 </div>
@@ -173,8 +174,8 @@ export default function ConferenceProceedings() {
                 >
                   Note:
                 </span>{' '}
-                After an abstract is accepted, authors will be invited to submit the full paper for
-                inclusion in the post-conference proceedings and consideration for journal
+                After an abstract is accepted, authors will be invited to submit the full abstract
+                for inclusion in the post-conference proceedings and consideration for journal
                 publication.
               </p>
             </div>

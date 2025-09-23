@@ -10,8 +10,8 @@ export default function PeerReviewPolicy() {
 
       {/* Policy Text */}
       <p className="text-muted-foreground leading-relaxed text-justify space-y-4">
-        We invite submissions of technical papers that offer long-term value and contribute to the
-        advancement of the scientific community.
+        We invite submissions of technical abstracts that offer long-term value and contribute to
+        the advancement of the scientific community.
       </p>
 
       <p className="text-muted-foreground leading-relaxed text-justify space-y-4">
@@ -22,10 +22,10 @@ export default function PeerReviewPolicy() {
       </p>
 
       <p className="text-muted-foreground leading-relaxed text-justify space-y-4">
-        All papers undergo a <strong>double-blind review</strong>, focusing on originality,
+        All abstracts undergo a <strong>double-blind review</strong>, focusing on originality,
         technical accuracy, and clarity. The technical committee will make final decisions based on
         reviewer feedback. This comprehensive process guarantees the quality and credibility of the
-        submitted papers.
+        submitted abstracts.
       </p>
     </section>
   );

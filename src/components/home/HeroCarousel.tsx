@@ -45,11 +45,11 @@ const HeroCarousel: FC = () => {
             {/* Important Dates Section */}
             <div className="mb-8 space-y-3">
               <div className="flex flex-col md:flex-row md:justify-center md:gap-8 gap-2">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
-                  <span className="font-semibold text-sm sm:text-base">Registration Deadline:</span>
-                  <span className="">1 November, 2025</span>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2 text-sm sm:text-base">
+                  <span className="font-semibold">Registration Deadline:</span>
+                  <span>1 November, 2025</span>
                 </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2 text-sm sm:text-base">
                   <span className="font-semibold text-sm sm:text-base">
                     Abstract Submission Deadline:
                   </span>
@@ -58,7 +58,7 @@ const HeroCarousel: FC = () => {
               </div>
 
               <div className="flex flex-col md:flex-row md:justify-center md:gap-8 gap-2 text-sm md:text-base">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2 text-sm sm:text-base">
                   <span className="font-semibold text-sm sm:text-base">
                     Notification of Acceptance:
                   </span>

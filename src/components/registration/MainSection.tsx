@@ -8,7 +8,7 @@ export default function MainSection() {
             Conference Registration
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto mb-8">
-            Presenting authors must register to present their papers at the conference. Accepted
+            Presenting authors must register to present their abstracts at the conference. Accepted
             articles will be included in the conference proceedings, with a printed abstract book
             and also available as post-conference e-proceedings on the website. Additionally, there
             will be an option for poster presentations.

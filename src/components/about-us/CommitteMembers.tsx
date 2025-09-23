@@ -18,12 +18,14 @@ import {
   m14,
 } from '@/assets';
 import Image from 'next/image';
-import { FiPhone, FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 interface Advisor {
   name: string;
   title: string;
   affiliation: string;
+  email: string;
   imageUrl: string;
 }
 
@@ -33,12 +35,14 @@ const advisors: Advisor[] = [
     title:
       'Associate Professor <br/> Applied Chemistry and Chemical Engineering <br/> University of Dhaka',
     affiliation: 'Faculty Advisor at ACS Student Chapter, DU',
+    email: 'shahruzzaman@du.ac.bd',
     imageUrl: kynotespeaker2,
   },
   {
     name: 'Sadit Bihongo Malitha',
     title: 'Lecturer <br/> Applied Chemistry and Chemical Engineering <br/> University of Dhaka',
     affiliation: 'Faculty Co-Advisor at ACS Student Chapter, DU',
+    email: 'malitha@du.ac.bd',
     imageUrl: kynotespeaker3,
   },
 ];
@@ -154,9 +158,9 @@ const members: Member[] = [
 
 export default function KeynoteSpeakers() {
   return (
-    <section className="py-10 mb-24 bg-background">
+    <section className="mb-10 md:mb-24 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl mb-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-primary">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-16 lg:mb-20 text-primary">
           Faculty Advisors
         </h2>
 
@@ -164,7 +168,7 @@ export default function KeynoteSpeakers() {
           {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-muted/50 transition-colors h-full"
+              className="flex flex-col items-center text-center p-6 rounded-2xl bg-muted/20 hover:bg-muted/50 transition-colors h-full"
             >
               {/* Image - consistent size with proper Next.js Image implementation */}
               <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 mb-6">
@@ -187,7 +191,7 @@ export default function KeynoteSpeakers() {
                 </div>
 
                 {/* Title - fixed minimum height container */}
-                <div className="min-h-[96px] flex items-center justify-center mb-6 flex-grow">
+                <div className="min-h-[96px] flex items-center justify-center mb-4 flex-grow">
                   <p
                     className="text-lg font-semibold text-primary text-center leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: advisor.title }}
@@ -197,10 +201,16 @@ export default function KeynoteSpeakers() {
                 {/* Affiliation - consistent positioning at bottom */}
                 <div className="mt-auto">
                   {advisor.affiliation && (
-                    <p className="text-base text-muted-foreground bg-foreground/10 px-4 py-2 rounded-full whitespace-nowrap">
+                    <p className="text-xs lg:text-base text-muted-foreground bg-foreground/10 px-4 py-2 rounded-full whitespace-nowrap">
                       {advisor.affiliation}
                     </p>
                   )}
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-2 mt-2">
+                  <FiMail className="text-red-800" />
+                  <p>{advisor.email}</p>
                 </div>
               </div>
             </div>
@@ -208,19 +218,29 @@ export default function KeynoteSpeakers() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl pt-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-primary">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 text-primary">
           Executive Committee
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
           {members.map((member, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
               key={index}
               className="flex flex-col items-center text-center p-6 rounded-2xl bg-muted/20 hover:bg-muted/50 transition-colors h-full"
             >
-              {/* Image */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 mb-6">
+              {/* Image with Instagram-like animation */}
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
+                whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 120, damping: 10 }}
+                viewport={{ once: false }}
+                className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 mb-6"
+              >
                 <Image
                   src={member.imageUrl}
                   alt={member.name}
@@ -228,7 +248,7 @@ export default function KeynoteSpeakers() {
                   className="object-cover"
                   sizes="(max-width: 768px) 192px, 224px"
                 />
-              </div>
+              </motion.div>
 
               {/* Content */}
               <div className="flex flex-col items-center flex-grow w-full">
@@ -240,17 +260,7 @@ export default function KeynoteSpeakers() {
                 </div>
 
                 {/* Position */}
-                <p className="text-lg font-semibold text-primary mb-4">{member.position}</p>
-
-                {/* Mobile numbers */}
-                <div className="flex flex-col items-center gap-1 mb-2">
-                  {member.mobile.map((phone, i) => (
-                    <div key={i} className="flex items-center gap-2 text-base text-foreground">
-                      <FiPhone className="text-green-800" />
-                      <span>{phone}</span>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-lg font-semibold text-primary">{member.position}</p>
 
                 {/* Email */}
                 <div className="flex items-center gap-2 mt-2">
@@ -258,7 +268,7 @@ export default function KeynoteSpeakers() {
                   <p>{member.email}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

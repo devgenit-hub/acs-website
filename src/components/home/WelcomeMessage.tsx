@@ -20,10 +20,10 @@ export default function WelcomeMessage() {
               industry with sustainable alternatives.
             </p>
             <p>
-              Join us at ICESGE-2025, where we&quot;ve created a versatile platform—accessible both
-              online and offline—for researchers, engineers, and academics like you. It&quot;s a
+              Join us at ICESGE-2025, where we&apos;ve created a versatile platform—accessible both
+              online and offline—for researchers, engineers, and academics like you. It&apos;s a
               fantastic opportunity to connect, share your work, and help to shape the future of
-              science and technology. We can&quot;t wait to see you there!
+              science and technology. We can&apos;t wait to see you there!
             </p>
           </div>
         </div>

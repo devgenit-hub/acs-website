@@ -202,7 +202,7 @@ export default function RegistrationProcess() {
                   {/* Bkash */}
                   <div className="bg-pink-100 p-4 rounded-lg border border-pink-300 flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <Image src={bkash} alt="Bkash" className="h-10" />
+                      <Image width={40} height={50} src={bkash} alt="Bkash" className="h-10" />
                       <span className="font-semibold text-foreground">
                         <p>Bkash</p>
                         <p className="text-muted-foreground font-medium">01518618583</p>
@@ -212,7 +212,7 @@ export default function RegistrationProcess() {
                   {/* Nagad */}
                   <div className="bg-orange-100 p-4 rounded-lg border border-orange-300 flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <Image src={nagad} alt="Nagad" className="h-10" />
+                      <Image width={40} height={50} src={nagad} alt="Nagad" className="h-10" />
                       <span className="font-semibold text-foreground">
                         <p>Nagad</p>
                         <p className="text-muted-foreground font-medium">01518618583</p>
