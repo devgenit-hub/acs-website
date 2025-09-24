@@ -158,9 +158,9 @@ const members: Member[] = [
 
 export default function KeynoteSpeakers() {
   return (
-    <section className="mb-10 md:mb-24 bg-background">
+    <section className="py-16 md:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl mb-24">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-16 lg:mb-20 text-primary">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-10 text-primary">
           Faculty Advisors
         </h2>
 
@@ -219,7 +219,7 @@ export default function KeynoteSpeakers() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 text-primary">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-10 text-primary">
           Executive Committee
         </h2>
 

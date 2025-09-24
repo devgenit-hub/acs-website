@@ -1,9 +1,9 @@
 export default function WelcomeMessage() {
   return (
-    <section className="pt-16 mb-24">
+    <section className="pt-16 md:pt-20 lg:pt-24">
       <div className="container mx-auto px-4">
         <div className="bg-background text-card-foreground rounded-xl border border-border shadow-lg flex flex-col gap-5 p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
             Welcome Message
           </h1>
           <div className="flex flex-col gap-5 text-justify text-muted-foreground">

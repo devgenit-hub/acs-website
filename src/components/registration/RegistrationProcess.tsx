@@ -63,11 +63,11 @@ const registrationFees: RegistrationFees[] = [
 
 export default function RegistrationProcess() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Registration Process
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto px-4">
@@ -123,7 +123,7 @@ export default function RegistrationProcess() {
         {/* Payment Information Section */}
         <div className="bg-card rounded-2xl shadow-xl overflow-hidden">
           <div className="bg-gradient-to-r from-primary to-primary-foreground px-8 py-6">
-            <h2 className="text-2xl font-bold text-primary-foreground flex items-center gap-3">
+            <h2 className="text-xl md:text-2xl font-bold text-primary-foreground flex items-center gap-3">
               <FaUniversity className="w-7 h-7" />
               Payment Information
             </h2>

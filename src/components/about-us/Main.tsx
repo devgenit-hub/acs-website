@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function Main() {
   return (
-    <section className="pt-24 md:pt-24 px-4 md:px-8 lg:px-16 container mx-auto mb-24">
+    <section className="pt-16 md:pt-20 lg:pt-24s px-4 md:px-8 lg:px-16 container mx-auto">
       {/* Heading */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary text-center mb-6 md:mb-10 drop-shadow-md">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary text-center mb-6 md:mb-10 drop-shadow-md">
         What is ACS DU Chapter?
       </h1>
 

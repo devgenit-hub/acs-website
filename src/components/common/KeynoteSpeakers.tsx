@@ -35,9 +35,9 @@ const speakers: Speaker[] = [
 
 export default function KeynoteSpeakers() {
   return (
-    <section className="bg-background mb-24">
+    <section className="bg-background pt-16 md:pt-20 lg:pt-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 lg:mb-20 text-primary">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-10 text-primary">
           Keynote Speakers
         </h2>
 
@@ -92,7 +92,7 @@ export default function KeynoteSpeakers() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   {speaker.affiliation && (
-                    <p className="text-sm text-muted-foreground bg-foreground/10 backdrop-blur-md px-4 py-2 rounded-full shadow-sm whitespace-nowrap">
+                    <p className="text-xs sm:text-sm text-muted-foreground bg-foreground/10 backdrop-blur-md px-4 py-2 rounded-full shadow-sm whitespace-nowrap">
                       {speaker.affiliation}
                     </p>
                   )}

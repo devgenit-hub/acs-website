@@ -126,7 +126,7 @@ export default HeroCarousel;
 
 const Actions = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-5 text-center">
+    <div className="flex flex-col justify-center items-center text-center">
       {/* Conference Date Highlight */}
       <div className="mb-8">
         <div className="inline-block bg-black/60 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">

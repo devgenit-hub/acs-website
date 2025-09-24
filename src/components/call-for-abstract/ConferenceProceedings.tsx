@@ -1,10 +1,10 @@
 export default function ConferenceProceedings() {
   return (
-    <section className="pt-10 md:pt-16 lg:pt-24 px-4 bg-gradient-to-br from-background to-secondary/20">
+    <section className="pt-16 md:pt-20 lg:pt-24 px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary bg-clip-text mb-10">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary bg-clip-text mb-6 md:mb-10">
             Conference Proceedings
           </h2>
           <p className="text-muted-foreground italic max-w-3xl mx-auto leading-relaxed">
@@ -33,7 +33,7 @@ export default function ConferenceProceedings() {
 
               <div className="relative z-10">
                 <h3
-                  className="text-2xl font-semibold bg-gradient-to-r from-primary to-primary/90 
+                  className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-primary to-primary/90 
                                bg-clip-text text-transparent mb-4
                                group-hover:from-primary group-hover:to-accent
                                transition-all duration-300"

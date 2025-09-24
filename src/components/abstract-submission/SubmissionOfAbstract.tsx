@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function SubmissionOfAbstract() {
   return (
-    <section className="container mx-auto max-w-3xl px-6 mb-24">
+    <section className="container mx-auto max-w-3xl px-6 pt-16 md:pt-20 lg:pt-24">
       {/* Header */}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-primary mb-8">
+      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center text-primary mb-6 md:mb-10">
         Submission of Abstract
       </h2>
 

@@ -38,12 +38,12 @@ const dates: Dates[] = [
 
 export default function ImportantDatesPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background to-secondary">
-      <section className="py-16 px-4">
+    <main className="min-h-screen bg-gradient-to-br from-background to-secondary py-16 md:py-20 lg:py-24">
+      <section className="px-4">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-4">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-4">
               Important Dates
             </h1>
             <p className="text-muted-foreground max-w-3xl mx-auto">

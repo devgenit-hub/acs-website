@@ -1,10 +1,10 @@
 export default function MainSection() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-background to-muted">
+    <section className="pt-16 md:pt-20 lg:pt-24 pb-24 px-4 bg-gradient-to-br from-background to-muted">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-10">
             Conference Registration
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto mb-8">

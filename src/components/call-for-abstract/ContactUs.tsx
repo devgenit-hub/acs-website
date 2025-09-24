@@ -1,10 +1,10 @@
 export default function ContactUs() {
   return (
-    <section className="px-4 mb-24 mt-24">
+    <section className="px-4 py-16 md:py-20 lg:py-24">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary mb-4">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary mb-6 md:mb-10">
             Contact Information
           </h2>
         </div>
@@ -17,7 +17,9 @@ export default function ContactUs() {
           >
             {/* Main Contact */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-2">Md. Rakibur Rahman</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
+                Md. Rakibur Rahman
+              </h3>
               <p className="text-primary font-medium mb-4">President at ACS DU Chapter</p>
               <div className="h-1 w-20 bg-primary/20 rounded-full mb-6" />
             </div>
