@@ -19,7 +19,7 @@ export default function Footer() {
             />
           </div>
           <div className="space-y-1">
-            <p className="text-foreground font-medium">ACS International Students Chapter</p>
+            <p className="text-foreground font-medium">ACS International Student Chapter</p>
             <p className="text-muted-foreground">Chapter for Life&reg;</p>
             <p className="text-muted-foreground">University of Dhaka</p>
           </div>

@@ -15,6 +15,7 @@ import {
 interface Fees {
   type: string;
   amount: string;
+  reducedAmount?: string;
   bgColor: string;
   textColor: string;
 }
@@ -36,7 +37,7 @@ const registrationFees: RegistrationFees[] = [
       },
       {
         type: 'International',
-        amount: '80 USD',
+        amount: '100 USD',
         bgColor: 'bg-primary',
         textColor: 'text-primary-foreground',
       },
@@ -47,13 +48,14 @@ const registrationFees: RegistrationFees[] = [
     fees: [
       {
         type: 'Local',
-        amount: '999 BDT',
+        amount: '699 BDT',
+        reducedAmount: '999',
         bgColor: 'bg-secondary',
         textColor: 'text-secondary-foreground',
       },
       {
         type: 'International',
-        amount: '40 USD',
+        amount: '50 USD',
         bgColor: 'bg-muted',
         textColor: 'text-muted-foreground',
       },
@@ -73,6 +75,10 @@ export default function RegistrationProcess() {
           <p className="text-muted-foreground max-w-2xl mx-auto px-4">
             Complete your registration by selecting your category and following the payment
             instructions below.
+          </p>
+          <p className="text-black font-bold max-w-2xl mx-auto px-4">
+            There will be no team registration, only individual registration. Team Name can be given
+            in the abstract.
           </p>
         </div>
 
@@ -107,8 +113,9 @@ export default function RegistrationProcess() {
                           <span className="text-muted-foreground font-medium">{fee.type}</span>
                         </div>
                         <div
-                          className={`px-4 py-2 rounded-full font-bold ${fee.bgColor} ${fee.textColor}`}
+                          className={`px-4 py-2 rounded-full font-bold flex items-center gap-1 ${fee.bgColor} ${fee.textColor}`}
                         >
+                          <del className="text-sm text-red-500"> {fee.reducedAmount}</del>
                           {fee.amount}
                         </div>
                       </div>

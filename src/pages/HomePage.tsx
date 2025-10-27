@@ -1,4 +1,4 @@
-import KeynoteSpeakers from '@/components/common/KeynoteSpeakers';
+// import KeynoteSpeakers from '@/components/common/KeynoteSpeakers';
 import Scope from '@/components/home/Scope';
 import HeroCarousel from '@/components/home/HeroCarousel';
 import Partners from '@/components/home/Partners';
@@ -10,7 +10,7 @@ export default function HomePage() {
       <HeroCarousel />
       <WelcomeMessage />
       <Scope />
-      <KeynoteSpeakers />
+      {/* <KeynoteSpeakers /> */}
       <Partners />
     </>
   );

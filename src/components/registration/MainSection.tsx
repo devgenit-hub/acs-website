@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function MainSection() {
   return (
     <section className="pt-16 md:pt-20 lg:pt-24 pb-24 px-4 bg-gradient-to-br from-background to-muted">
@@ -17,19 +19,20 @@ export default function MainSection() {
           {/* Registration Deadline */}
           <div className="mb-8">
             <p className="text-xl font-semibold text-destructive">
-              Registration Deadline: 1st October, 2025
+              Early Bird Registration Deadline: 30 November, 2025 <br />
+              Regular Registration Deadline: 7 December, 2025
             </p>
           </div>
 
           {/* Registration Button */}
-          <a
-            href="https://your-registration-link.com"
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdzK-cXInAVXpICEWEsK0CXFgNo8X7MAxMC7xjMk0Xj1fETIQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             CLICK HERE FOR REGISTRATION
-          </a>
+          </Link>
         </div>
       </div>
     </section>

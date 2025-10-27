@@ -13,13 +13,13 @@ const dates: Dates[] = [
   {
     id: 1,
     title: 'Registration Deadline',
-    date: '1 November, 2025',
+    date: '30 November, 2025',
     icon: <MdHowToReg className="w-10 h-10 text-primary" />,
   },
   {
     id: 2,
     title: 'Abstract Submission Deadline',
-    date: '20 November, 2025',
+    date: '15 November, 2025',
     icon: <MdDescription className="w-10 h-10 text-primary" />,
   },
   {
@@ -31,7 +31,7 @@ const dates: Dates[] = [
   {
     id: 4,
     title: 'Conference Date',
-    date: '19 December, 2025',
+    date: '13 December, 2025',
     icon: <MdEvent className="w-10 h-10 text-primary" />,
   },
 ];

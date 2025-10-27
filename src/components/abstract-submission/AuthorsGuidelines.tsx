@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BiDownload } from 'react-icons/bi';
 
 export default function AuthorsGuidelines() {
   return (
@@ -26,10 +27,13 @@ export default function AuthorsGuidelines() {
       {/* CTA */}
       <div className="mt-10 text-center">
         <Link
-          href="#"
-          className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg shadow hover:bg-primary/90 transition-all"
+          href="/docs/template.docx"
+          download="Abstract_Template.docx"
+          className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg shadow hover:bg-primary/90 transition-all hover:cursor-pointer"
         >
-          Download Abstract Template
+          <span className="flex items-center gap-2">
+            Download Abstract Template <BiDownload />
+          </span>
         </Link>
       </div>
     </section>

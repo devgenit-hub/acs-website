@@ -19,10 +19,6 @@ const links: Links[] = [
   {
     text: 'Call For Abstract',
     link: '/call-for-abstract',
-    sublink: [
-      { text: 'Book Publish', link: '/call-for-abstract/book-publish' },
-      { text: 'Online Abstract and Posters Publish', link: '/call-for-abstract/online-abstract' },
-    ],
   },
   { text: 'Important Dates', link: '/important-dates' },
   { text: 'Registration', link: '/registration' },
@@ -72,21 +68,6 @@ export default function Navbar() {
               {link.text}
               {link.sublink && <FiChevronDown className="mt-0.5 text-sm" />}
             </Link>
-
-            {/* Desktop Dropdown */}
-            {link.sublink && (
-              <div className="absolute left-0 top-full mt-2 bg-primary/90 rounded-md shadow-lg min-w-[220px] overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {link.sublink.map((sub, subIdx) => (
-                  <Link
-                    key={subIdx}
-                    href={sub.link}
-                    className="block px-4 py-2 hover:bg-accent transition-colors"
-                  >
-                    {sub.text}
-                  </Link>
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>

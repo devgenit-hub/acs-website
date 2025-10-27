@@ -7,6 +7,7 @@ export const sustainability = '/images/thematic/Sustainability.jpg';
 export const ec = '/images/thematic/Environmental-Science.jpg';
 export const gc = '/images/thematic/GreenChemistry.jpg';
 export const che = '/images/thematic/ChE.jpg';
+export const energy = '/images/thematic/energy.jpg';
 
 // keynote speaker
 export const kynotespeaker1 = '/images/keynote-speakers/Dr.-Mohammad-Ismail_Updated.jpeg';
@@ -19,7 +20,7 @@ export const herocarousel2 = '/images/herocarousel/Administrative_Building.jpg';
 export const herocarousel3 = '/images/herocarousel/raju.jpg';
 
 // About us
-export const aboutUs = '/images/about-us/Green-Chemistry.jpg';
+export const aboutUs = '/images/about-us/our_team.jpg';
 
 // Executive Members
 export const m1 = '/images/about-us/Executive/Rakib.jpg';

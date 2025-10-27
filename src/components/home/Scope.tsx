@@ -1,5 +1,5 @@
 'use client';
-import { che, ec, gc, sustainability } from '@/assets';
+import { che, ec, gc, sustainability, energy } from '@/assets';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -39,6 +39,17 @@ const scopes: Scope[] = [
       'Bio Process Engineering',
     ],
     imageUrl: che,
+  },
+
+  {
+    title: 'Energy',
+    description: [
+      'Renewable Energy Transition',
+      'Energy Equity and Access',
+      'Corporate Responsibility',
+      'Energy Security',
+    ],
+    imageUrl: energy,
   },
 ];
 

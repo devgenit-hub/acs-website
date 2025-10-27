@@ -27,32 +27,9 @@ const partners: Partner[] = [
   {
     name: 'ACS International Student Chapter, CoU',
   },
-  {
-    name: 'ACS International Chapter of Malaysia',
-  },
+
   {
     name: 'ACS International Chapter of Bangladesh',
-  },
-  {
-    name: 'ACS International Chapter of Singapore',
-  },
-  {
-    name: 'ACS International Chapter of Thailand',
-  },
-  {
-    name: 'ACS International Chapter of Southwestern China',
-  },
-  {
-    name: 'ACS International Student Chapter of National University of Singapore',
-  },
-  {
-    name: 'ACS International Student Chapter of Anteneo de Manila University, The Philippines',
-  },
-  {
-    name: 'ACS International Student Chapter of Nazarbayev University, Kazakhstan',
-  },
-  {
-    name: 'ACS International Student Chapters in Malaysia (UKM, USM, UM, UTM, UMP, UIA, UTP, Monash, Curtin) ',
   },
 ];
 
