@@ -14,10 +14,9 @@ export default function Main() {
         ACS Student Chapter, University of Dhaka is the first student chapter of American Chemical
         Society in Bangladesh. The chapter was established by 10 dedicated students of Dept. of
         Applied Chemistry and Chemical Engineering, University of Dhaka with the kind assistance of
-        the faculty advisor Dr. Mohammad Ismail in association with American Chemical Society (ACS)
-        Bangladesh Chapter. The main goal of this chapter is to enrich students with all relevant
-        knowledge and skills along with academic education so that they can be leading people in
-        chemical and related science. The objectives of this chapter are:
+        the faculty advisor Dr. Mohammad Ismail. The main goal of this chapter is to enrich students
+        with all relevant knowledge and skills along with academic education so that they can be
+        leading people in chemical and related science. The objectives of this chapter are:
         <ul className="list-disc list-inside mt-4 space-y-1 pl-4 md:pl-8">
           <li>
             To afford opportunity for students of chemical and related science to work in a common

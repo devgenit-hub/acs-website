@@ -10,9 +10,10 @@ export default function WelcomeMessage() {
             <p>
               We are delighted to invite you to the 1st International Conference on Environmental
               Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025), organized
-              by American Chemical Society (ACS) Student Chapter, University of Dhaka. This
-              conference highlights the crucial role of Chemistry in advancing Modern Science,
-              Engineering, Technology, and Sustainable Development.
+              by American Chemical Society (ACS) Student Chapter, University of Dhaka in association
+              with Americal Chemical Society (ACS) Bangladesh Chapter. This conference highlights
+              the crucial role of Chemistry in advancing Modern Science, Engineering, Technology,
+              and Sustainable Development.
             </p>
             <p>
               The aim of this conference is to Promote green chemistry awareness, showcase
