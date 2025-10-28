@@ -51,7 +51,7 @@ export default function Navbar() {
   const NavbarContent = () => (
     <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
       {/* Logo */}
-      <Link href="/" className="flex items-center gap-2">
+      <Link href="https://acsduyouthsummit2025.org/" className="flex items-center gap-2">
         <Image src={mainLogo} width={50} height={50} alt="Main Logo" />
       </Link>
 

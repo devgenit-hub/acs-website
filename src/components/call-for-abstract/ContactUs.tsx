@@ -120,10 +120,10 @@ export default function ContactUs() {
                   <div>
                     <p className="font-medium text-foreground">Website</p>
                     <a
-                      href="https://acs-du.vercel.app/"
+                      href="https://acsduyouthsummit2025.org/"
                       className="text-primary hover:text-ring transition-colors duration-200"
                     >
-                      https://acs-du.vercel.app/
+                      https://acsduyouthsummit2025.org/
                     </a>
                   </div>
                 </div>

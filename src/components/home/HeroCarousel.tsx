@@ -30,19 +30,17 @@ const HeroCarousel: FC = () => {
     <section>
       <div className="w-full min-h-screen relative">
         {/* Fixed Text Overlay */}
-        <div className="absolute top-0 left-[50px] right-[50px] h-full flex items-center justify-center z-10 pointer-events-none">
-          <div className="text-center text-white sm:px-6 max-w-6xl pointer-events-auto">
+        <div className="absolute top-0 left-0 right-[50px] h-full w-screen px-10 flex items-center justify-center z-10">
+          <div className="text-center text-white sm:px-6 max-w-6xl">
             {/* Main Title */}
             <h1 className="sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">
               1st International Conference on Environmental Sustainability and Green Earth: ACS
               Bangladesh Youth Summit (ICESGE-2025)
             </h1>
-
             {/* Subtitle */}
             <p className="text-xs sm:text-base lg:text-xl mb-6 md:mb-8 drop-shadow-md font-medium opacity-90">
               Where Youth Leadership and Chemistry Unite for a Greener Earth
             </p>
-
             {/* Important Dates Section */}
             <div className="mb-8 space-y-3">
               <div className="flex flex-col md:flex-row md:justify-center md:gap-8 gap-2">
@@ -67,7 +65,6 @@ const HeroCarousel: FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="hidden xl:inline-block">
               <Actions />
             </div>

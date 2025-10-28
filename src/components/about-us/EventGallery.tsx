@@ -11,7 +11,7 @@ const galleryImages = [
 
 export default function EventGallery() {
   return (
-    <section className="pt-16 md:pt-20 lg:pt-24 px-4 md:px-8 lg:px-16 container mx-auto">
+    <section className="py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-16 container mx-auto">
       <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary text-center mb-6 md:mb-10 drop-shadow-md">
         Event Gallery
       </h1>
