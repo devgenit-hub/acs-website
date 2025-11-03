@@ -24,11 +24,15 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  metadataBase: new URL('https://example.com'),
+  metadataBase: new URL('https://acsduyouthsummit2025.org'),
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [{ url: siteConfig.ogImage }],
+    images: [siteConfig.ogImage],
     url: siteConfig.url,
     siteName: siteConfig.name,
   },

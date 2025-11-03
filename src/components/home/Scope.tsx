@@ -76,7 +76,7 @@ export default function Scopes() {
                 viewport={{ once: true }}
               >
                 <div
-                  className={`relative h-64 md:h-[400px] rounded-2xl overflow-hidden transition-transform duration-500 ease-out hover:scale-[1.02] ${index % 2 === 0 ? 'rotate-2 hover:rotate-0' : '-rotate-2 hover:rotate-0'}`}
+                  className={`relative h-64 md:h-[400px] rounded-2xl overflow-hidden transition-transform duration-500 ease-out hover:scale-[1.02] ${index % 2 === 0 ? 'rotate-0 hover:rotate-2 ' : 'rotate-0 hover:-rotate-2'}`}
                 >
                   <Image
                     src={scope.imageUrl}

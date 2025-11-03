@@ -65,6 +65,27 @@ const HeroCarousel: FC = () => {
                 </div>
               </div>
             </div>
+            {/* Conference Date Highlight */}
+            <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-8">
+              <div className="inline-block bg-black/30 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
+                <div className="rounded-lg px-3 md:px-4 py-1.5 md:py-2">
+                  <span className="font-semibold text-xs sm:text-sm md:text-base">
+                    Conference Date:
+                  </span>
+                  <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
+                    13 December, 2025
+                  </span>
+                </div>
+              </div>
+              <div className="inline-block bg-black/30 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
+                <div className="rounded-lg px-3 md:px-4 py-1.5 md:py-2">
+                  <span className="font-semibold text-xs sm:text-sm md:text-base">Venue:</span>
+                  <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
+                    Asiatic Society of Bangladesh
+                  </span>
+                </div>
+              </div>
+            </div>
             <div className="hidden xl:inline-block">
               <Actions />
             </div>
@@ -125,26 +146,6 @@ export default HeroCarousel;
 const Actions = () => {
   return (
     <div className="flex flex-col justify-center items-center text-center">
-      {/* Conference Date Highlight */}
-      <div className="mb-8 flex flex-wrap justify-center gap-8">
-        <div className="inline-block bg-black/30 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
-          <div className="rounded-lg px-3 md:px-4 py-1.5 md:py-2">
-            <span className="font-semibold text-xs sm:text-sm md:text-base">Conference Date:</span>
-            <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
-              13 December, 2025
-            </span>
-          </div>
-        </div>
-        <div className="inline-block bg-black/30 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 text-white">
-          <div className="rounded-lg px-3 md:px-4 py-1.5 md:py-2">
-            <span className="font-semibold text-xs sm:text-sm md:text-base">Venue:</span>
-            <span className="ml-1 md:ml-2 text-accent font-semibold text-xs sm:text-sm md:text-base">
-              Asiatic Society of Bangladesh
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Call To Action Buttons */}
       <div className="flex flex-wrap grow-0  gap-8 justify-center">
         <Link

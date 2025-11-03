@@ -2,44 +2,115 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { RxCross2 } from 'react-icons/rx';
-import { FiChevronDown } from 'react-icons/fi';
 import { mainLogo } from '@/assets';
 import Image from 'next/image';
+
+// MUI imports
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Slide from '@mui/material/Slide';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 interface Links {
   text: string;
   link: string;
-  sublink?: { text: string; link: string }[];
 }
 
 const links: Links[] = [
   { text: 'Home Page', link: '/' },
-  {
-    text: 'Call For Abstract',
-    link: '/call-for-abstract',
-  },
+  { text: 'Call For Abstract', link: '/call-for-abstract' },
   { text: 'Important Dates', link: '/important-dates' },
   { text: 'Registration', link: '/registration' },
   { text: 'Abstract Submission', link: '/abstract-submission' },
   { text: 'About Us', link: '/about-us' },
 ];
 
+const muiTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#004b87', // deep-blue
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#e6e6e6', // soft-gray
+      contrastText: '#333333',
+    },
+    text: {
+      primary: '#ffffff',
+      secondary: '#333333',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize',
+          fontWeight: 500,
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+        },
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          maxWidth: '100%',
+          paddingLeft: '16px',
+          paddingRight: '16px',
+          '@media (min-width: 768px)': {
+            paddingLeft: '24px',
+            paddingRight: '24px',
+          },
+        },
+      },
+    },
+  },
+});
+
+interface HideOnScrollProps {
+  children: React.ReactElement;
+}
+
+function HideOnScroll({ children }: HideOnScrollProps) {
+  const trigger = useScrollTrigger({
+    threshold: 100,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100); // adjust trigger point as needed
+      setScrolled(window.scrollY > 100);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   const isActiveRoute = (linkPath: string) => {
     if (!pathname) return false;
@@ -47,133 +118,181 @@ export default function Navbar() {
     return pathname.startsWith(linkPath);
   };
 
-  // Navbar content (so we can reuse for static + fixed)
   const NavbarContent = () => (
-    <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
-      {/* Logo */}
-      <Link href="https://acsduyouthsummit2025.org/" className="flex items-center gap-2">
-        <Image src={mainLogo} width={50} height={50} alt="Main Logo" />
-      </Link>
-
-      {/* Desktop Links */}
-      <div className="hidden lg:flex gap-6 items-center">
-        {links.map((link, idx) => (
-          <div key={idx} className="relative group">
-            <Link
-              href={link.link}
-              className={`flex items-center gap-1 transition-all hover:opacity-80 px-3 py-1 rounded font-medium ${
-                isActiveRoute(link.link) ? 'text-accent font-semibold' : 'text-primary-foreground'
-              }`}
-            >
-              {link.text}
-              {link.sublink && <FiChevronDown className="mt-0.5 text-sm" />}
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      {/* Hamburger Icon */}
-      <button
-        className="lg:hidden flex items-center p-2 focus:outline-none"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle menu"
+    <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 3 } }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          py: { xs: 1.5, md: 2 },
+        }}
       >
-        {open ? <RxCross2 size={26} /> : <GiHamburgerMenu size={26} />}
-      </button>
-    </div>
+        {/* Logo */}
+        <Link
+          href="https://acsduyouthsummit2025.org/"
+          style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
+        >
+          <Image src={mainLogo} width={50} height={50} alt="Main Logo" priority />
+        </Link>
+
+        {/* Desktop Links */}
+        <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2, alignItems: 'center' }}>
+          {links.map((link, idx) => {
+            const isActive = isActiveRoute(link.link);
+            return (
+              <Button
+                key={idx}
+                component={Link}
+                href={link.link}
+                sx={{
+                  px: 2,
+                  py: 1,
+                  color: isActive ? '#ffcc00' : '#ffffff',
+                  fontWeight: isActive ? 600 : 500,
+                  fontSize: isActive ? '1.05rem' : '1rem',
+                  position: 'relative',
+                  '&:hover': {
+                    color: '#ffcc00',
+                    opacity: 0.9,
+                  },
+                  transition: 'all 0.3s ease',
+                  '&::after': isActive
+                    ? {
+                        content: '""',
+                        position: 'absolute',
+                        bottom: 0,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '80%',
+                        height: '2px',
+                        backgroundColor: '#ffcc00',
+                        borderRadius: '2px',
+                      }
+                    : {},
+                }}
+              >
+                {link.text}
+              </Button>
+            );
+          })}
+        </Box>
+
+        {/* Hamburger Icon */}
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          edge="end"
+          onClick={handleDrawerToggle}
+          sx={{
+            display: { lg: 'none' },
+            color: '#ffffff',
+          }}
+        >
+          {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+        </IconButton>
+      </Box>
+    </Container>
+  );
+
+  // Mobile drawer content
+  const drawer = (
+    <Box
+      sx={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#ffffff',
+      }}
+      role="presentation"
+    >
+      <List sx={{ pt: 2 }}>
+        {links.map((link, idx) => {
+          const isActive = isActiveRoute(link.link);
+          return (
+            <ListItem key={idx} disablePadding>
+              <ListItemButton
+                component={Link}
+                href={link.link}
+                onClick={handleDrawerToggle}
+                sx={{
+                  py: 2,
+                  px: 3,
+                  borderLeft: isActive ? '4px solid #ffcc00' : '4px solid transparent',
+                  backgroundColor: isActive ? '#ffcc002a' : 'transparent',
+                }}
+              >
+                <ListItemText
+                  primary={link.text}
+                  primaryTypographyProps={{
+                    fontWeight: isActive ? 600 : 500,
+                    fontSize: isActive ? '1.05rem' : '1rem',
+                    color: isActive ? '#004b87' : '#333333',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+    </Box>
   );
 
   return (
-    <>
-      {/* Default Navbar (static at top) */}
-      {!scrolled && (
-        <nav className="w-full bg-primary text-primary-foreground shadow-md relative z-40">
-          <NavbarContent />
-        </nav>
-      )}
+    <ThemeProvider theme={muiTheme}>
+      <Box sx={{ width: '100%', overflow: 'hidden' }}>
+        {/* Static Navbar - Hidden on scroll */}
+        <HideOnScroll>
+          <AppBar
+            position="static"
+            sx={{
+              backgroundColor: '#004b87',
+              boxShadow: 3,
+              width: '100%',
+            }}
+          >
+            <NavbarContent />
+          </AppBar>
+        </HideOnScroll>
 
-      {/* Fixed Navbar (appears when scrolled) */}
-      {scrolled && (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-primary text-primary-foreground shadow-md transition-transform duration-500 translate-y-0 animate-slideDown">
-          <NavbarContent />
-        </nav>
-      )}
+        {/* Fixed Navbar - Appears on scroll */}
+        <Slide direction="down" in={scrolled} mountOnEnter unmountOnExit>
+          <AppBar
+            position="fixed"
+            sx={{
+              backgroundColor: '#004b87',
+              boxShadow: 4,
+              zIndex: 1201,
+              width: '100%',
+              left: 0,
+              right: 0,
+            }}
+          >
+            <NavbarContent />
+          </AppBar>
+        </Slide>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="lg:hidden bg-secondary text-secondary-foreground shadow-inner fixed top-[64px] left-0 w-full z-40">
-          <div className="flex flex-col divide-y divide-border">
-            {links.map((link, idx) => (
-              <div key={idx} className="w-full">
-                {link.sublink ? (
-                  <>
-                    {/* Parent Button for dropdown */}
-                    <button
-                      onClick={() => setDropdownOpen(dropdownOpen === link.text ? null : link.text)}
-                      className={`flex justify-between items-center w-full px-6 py-3 text-left transition-colors font-medium ${
-                        isActiveRoute(link.link)
-                          ? 'text-accent font-semibold'
-                          : 'text-secondary-foreground'
-                      }`}
-                    >
-                      {link.text}
-                      <FiChevronDown
-                        className={`transition-transform duration-300 ${
-                          dropdownOpen === link.text ? 'rotate-180' : 'rotate-0'
-                        }`}
-                      />
-                    </button>
-
-                    {/* Mobile Dropdown */}
-                    {dropdownOpen === link.text && (
-                      <div className="flex flex-col bg-secondary/90">
-                        {link.sublink.map((sub, subIdx) => (
-                          <Link
-                            key={subIdx}
-                            href={sub.link}
-                            onClick={() => setOpen(false)}
-                            className="py-2 px-10 text-sm hover:bg-secondary/70 transition-colors"
-                          >
-                            {sub.text}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  // Direct Link for items without sublinks
-                  <Link
-                    href={link.link}
-                    onClick={() => setOpen(false)}
-                    className={`flex justify-between items-center w-full px-6 py-3 text-left transition-colors font-medium ${
-                      isActiveRoute(link.link)
-                        ? 'text-accent font-semibold'
-                        : 'text-secondary-foreground'
-                    }`}
-                  >
-                    {link.text}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Add animation */}
-      <style jsx>{`
-        @keyframes slideDown {
-          from {
-            transform: translateY(-100%);
-          }
-          to {
-            transform: translateY(0);
-          }
-        }
-        .animate-slideDown {
-          animation: slideDown 0.4s ease forwards;
-        }
-      `}</style>
-    </>
+        {/* Mobile Drawer */}
+        <Drawer
+          anchor="right"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'block', lg: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: '280px',
+              maxWidth: '80vw',
+              top: scrolled ? '80px' : '70px',
+              height: scrolled ? 'calc(100vh - 80px)' : 'calc(100vh - 70px)',
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+    </ThemeProvider>
   );
 }

@@ -56,7 +56,7 @@ const registrationFees: RegistrationFees[] = [
 
 export default function RegistrationProcess() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 container mx-auto">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
