@@ -1,6 +1,6 @@
 import OnlineAbstract from '@/pages/OnlineAbstract';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <OnlineAbstract />

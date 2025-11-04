@@ -1,11 +1,13 @@
 export default function WelcomeMessage() {
   return (
     <section className="pt-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto px-4">
-        <div className="bg-background text-card-foreground rounded-xl border border-border shadow-lg flex flex-col gap-5 p-8 md:p-12">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
-            Welcome Message
-          </h1>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <article className="bg-background text-card-foreground rounded-xl border border-border shadow-lg flex flex-col gap-5 p-8 md:p-12">
+          <header>
+            <h1 className="text-2xl md:text-4xl lg:text-5xl text-primary font-bold text-center w-full">
+              Welcome Message
+            </h1>
+          </header>
           <div className="flex flex-col gap-5 text-justify text-muted-foreground">
             <p>
               We are delighted to invite you to the 1st International Conference on Environmental
@@ -27,7 +29,7 @@ export default function WelcomeMessage() {
               science and technology. We can&apos;t wait to see you there!
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );

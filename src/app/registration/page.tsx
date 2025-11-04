@@ -1,6 +1,6 @@
 import Registration from '@/pages/Registration';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Registration />

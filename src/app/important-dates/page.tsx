@@ -1,6 +1,6 @@
 import ImportantDatesPage from '@/pages/ImportantDates';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <ImportantDatesPage />

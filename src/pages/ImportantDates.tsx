@@ -38,8 +38,8 @@ const dates: Dates[] = [
 
 export default function ImportantDatesPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background to-secondary py-12 sm:py-16 md:py-20 lg:py-24">
-      <section className="px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-gradient-to-br from-background to-secondary pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-20 lg:pb-24">
+      <div className="px-4 md:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-14 md:mb-16">
@@ -53,7 +53,7 @@ export default function ImportantDatesPage() {
           </div>
 
           {/* Timeline */}
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-7xl mx-auto">
             {/* Desktop Timeline - Vertical Center Line */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20" />
 
@@ -165,7 +165,7 @@ export default function ImportantDatesPage() {
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

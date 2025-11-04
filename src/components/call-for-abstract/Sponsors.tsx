@@ -62,7 +62,7 @@ const sponsorCategories: SponsorCategory[] = [
 
 export default function Sponsors() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-4 bg-gradient-to-br from-background to-secondary/20">
+    <section className="pt-16 md:pt-20 lg:pt-24 px-4 md:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">

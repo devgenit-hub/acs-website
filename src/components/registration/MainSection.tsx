@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function MainSection() {
   return (
-    <section className="pt-16 md:pt-20 lg:pt-24 pb-24 px-4 bg-gradient-to-br from-background to-muted">
+    <section className="pt-16 md:pt-20 lg:pt-24 pb-24 px-4 md:px-6 lg:px-8 bg-gradient-to-br from-background to-muted">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center">
+        <header className="text-center">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-10">
             Conference Registration
           </h2>
@@ -33,7 +33,7 @@ export default function MainSection() {
           >
             CLICK HERE FOR REGISTRATION
           </Link>
-        </div>
+        </header>
       </div>
     </section>
   );

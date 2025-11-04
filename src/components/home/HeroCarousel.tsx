@@ -123,7 +123,7 @@ const HeroCarousel: FC = () => {
               <div className="absolute inset-0 bg-black/60 z-[1]" />
               <Image
                 src={image.link}
-                alt=""
+                alt={`Conference venue image ${idx + 1}`}
                 fill
                 priority={idx === 0}
                 className="object-cover"
