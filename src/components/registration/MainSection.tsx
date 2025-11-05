@@ -1,4 +1,5 @@
-import Link from 'next/link';
+'use client';
+import Button from '@mui/material/Button';
 
 export default function MainSection() {
   return (
@@ -25,14 +26,30 @@ export default function MainSection() {
           </div>
 
           {/* Registration Button */}
-          <Link
+          <Button
+            component="a"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdzK-cXInAVXpICEWEsK0CXFgNo8X7MAxMC7xjMk0Xj1fETIQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            variant="contained"
+            size="large"
+            sx={{
+              px: 4,
+              py: 1.5,
+              fontSize: '1rem',
+              fontWeight: 600,
+              textTransform: 'none',
+              borderRadius: '8px',
+              boxShadow: 3,
+              '&:hover': {
+                boxShadow: 6,
+                transform: 'scale(1.05)',
+              },
+              transition: 'all 0.3s ease',
+            }}
           >
             CLICK HERE FOR REGISTRATION
-          </Link>
+          </Button>
         </header>
       </div>
     </section>

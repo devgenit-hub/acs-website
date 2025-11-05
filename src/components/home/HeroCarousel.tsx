@@ -8,6 +8,9 @@ import { FiDownload } from 'react-icons/fi';
 import { LuSend } from 'react-icons/lu';
 import './hero.css';
 import Link from 'next/link';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface Images {
   link: string;
@@ -102,20 +105,48 @@ const HeroCarousel: FC = () => {
           interval={5000}
           className="h-full"
           renderArrowPrev={(clickHandler) => (
-            <button
+            <IconButton
               onClick={clickHandler}
-              className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/70 text-white transition-all cursor-pointer rounded-full w-10 h-10 flex items-center justify-center"
+              sx={{
+                position: 'absolute',
+                left: { xs: 0, sm: '16px' },
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 20,
+                bgcolor: 'rgba(0, 0, 0, 0.4)',
+                color: 'white',
+                width: 40,
+                height: 40,
+                '&:hover': {
+                  bgcolor: 'rgba(0, 0, 0, 0.7)',
+                },
+                transition: 'all 0.3s ease',
+              }}
             >
-              ←
-            </button>
+              <ArrowBackIcon />
+            </IconButton>
           )}
           renderArrowNext={(clickHandler) => (
-            <button
+            <IconButton
               onClick={clickHandler}
-              className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/70 text-white transition-all cursor-pointer rounded-full w-10 h-10 flex items-center justify-center"
+              sx={{
+                position: 'absolute',
+                right: { xs: 0, sm: '16px' },
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 20,
+                bgcolor: 'rgba(0, 0, 0, 0.4)',
+                color: 'white',
+                width: 40,
+                height: 40,
+                '&:hover': {
+                  bgcolor: 'rgba(0, 0, 0, 0.7)',
+                },
+                transition: 'all 0.3s ease',
+              }}
             >
-              →
-            </button>
+              <ArrowForwardIcon />
+            </IconButton>
           )}
         >
           {images.map((image, idx) => (

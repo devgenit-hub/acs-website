@@ -1,4 +1,6 @@
+'use client';
 import Link from 'next/link';
+import Button from '@mui/material/Button';
 import { BiDownload } from 'react-icons/bi';
 
 export default function AuthorsGuidelines() {
@@ -29,15 +31,29 @@ export default function AuthorsGuidelines() {
 
         {/* CTA */}
         <nav className="mt-10 text-center" aria-label="Download template">
-          <Link
+          <Button
+            component={Link}
             href="/docs/template.docx"
             download="Abstract_Template.docx"
-            className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg shadow hover:bg-primary/90 transition-all hover:cursor-pointer"
+            variant="contained"
+            size="medium"
+            startIcon={<BiDownload />}
+            sx={{
+              px: 3,
+              py: 1.5,
+              fontSize: '1rem',
+              fontWeight: 600,
+              textTransform: 'none',
+              borderRadius: '8px',
+              boxShadow: 2,
+              '&:hover': {
+                boxShadow: 4,
+              },
+              transition: 'all 0.3s ease',
+            }}
           >
-            <span className="flex items-center gap-2">
-              Download Abstract Template <BiDownload />
-            </span>
-          </Link>
+            Download Abstract Template
+          </Button>
         </nav>
       </article>
     </section>

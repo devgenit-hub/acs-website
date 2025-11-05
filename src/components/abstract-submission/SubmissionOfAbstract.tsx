@@ -1,4 +1,5 @@
-import Link from 'next/link';
+'use client';
+import Button from '@mui/material/Button';
 import { LuSend } from 'react-icons/lu';
 
 export default function SubmissionOfAbstract() {
@@ -30,15 +31,30 @@ export default function SubmissionOfAbstract() {
 
         {/* Submission CTA */}
         <nav className="text-center mt-10" aria-label="Abstract submission">
-          <Link
+          <Button
+            component="a"
             href="https://docs.google.com/forms/d/e/1FAIpQLSfwDo5l1M1Chi8WWqHkO-BeeEn9kciDx7m78YBxenjCEJaseA/viewform"
             target="_blank"
-            className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg shadow hover:bg-primary/90 transition-all hover:cursor-pointer"
+            rel="noopener noreferrer"
+            variant="contained"
+            size="medium"
+            startIcon={<LuSend />}
+            sx={{
+              px: 3,
+              py: 1.5,
+              fontSize: '1rem',
+              fontWeight: 600,
+              textTransform: 'none',
+              borderRadius: '8px',
+              boxShadow: 2,
+              '&:hover': {
+                boxShadow: 4,
+              },
+              transition: 'all 0.3s ease',
+            }}
           >
-            <span className="flex items-center gap-2">
-              Click Here for Submission <LuSend />
-            </span>
-          </Link>
+            Click Here for Submission
+          </Button>
         </nav>
       </article>
     </section>

@@ -24,17 +24,55 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  metadataBase: new URL('https://acsduyouthsummit2025.org'),
+  keywords: siteConfig.keywords,
+  authors: [{ name: 'ACS Bangladesh Youth Summit' }],
+  creator: 'American Chemical Society (ACS) Student Chapter, University of Dhaka',
+  publisher: 'American Chemical Society (ACS) Bangladesh Chapter',
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '3PM0V6pN17mTKBjKs6hM3UxiNNeXcFZBljazoKNe35Y',
+  },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
+    apple: '/icon.png',
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    creator: '@ACS',
   },
 };
 

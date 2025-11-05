@@ -1,4 +1,16 @@
 import HomePage from '@/pages/HomePage';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description:
+    'Welcome to the 1st International Conference on Environmental Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025). Join us for this groundbreaking conference highlighting Chemistry in advancing Modern Science, Engineering, Technology, and Sustainable Development.',
+  openGraph: {
+    title: 'Home | ACS Youth Summit',
+    description:
+      'Welcome to the 1st International Conference on Environmental Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025).',
+  },
+};
 
 export default function Home() {
   return (

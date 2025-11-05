@@ -1,4 +1,7 @@
+'use client';
 import Image from 'next/image';
+import Button from '@mui/material/Button';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function Flyer() {
   return (
@@ -197,40 +200,50 @@ export default function Flyer() {
 
           {/* Download Button */}
           <div className="mt-8 text-center relative z-10">
-            <a
+            <Button
+              component="a"
               href="/flyer.pdf"
               download
-              className="group/btn inline-flex items-center px-8 py-4 
-                        bg-gradient-to-r from-primary to-primary/90 
-                        hover:from-primary/90 hover:to-accent
-                        text-primary-foreground font-semibold rounded-lg shadow-lg 
-                        hover:shadow-xl transition-all duration-300
-                        hover:transform hover:scale-105 hover:-translate-y-1
-                        border border-primary/20 hover:border-accent/30
-                        backdrop-blur-sm"
+              variant="contained"
+              size="large"
+              startIcon={<DownloadIcon />}
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: '1rem',
+                fontWeight: 600,
+                textTransform: 'none',
+                borderRadius: '8px',
+                background: 'linear-gradient(to right, #004b87, #004b87e6)',
+                boxShadow: 3,
+                border: '1px solid rgba(0, 75, 135, 0.2)',
+                position: 'relative',
+                overflow: 'hidden',
+                '&:hover': {
+                  background: 'linear-gradient(to right, #004b87e6, #ffcc00)',
+                  boxShadow: 6,
+                  transform: 'scale(1.05) translateY(-4px)',
+                  borderColor: 'rgba(255, 204, 0, 0.3)',
+                },
+                transition: 'all 0.3s ease',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: '-100%',
+                  width: '100%',
+                  height: '100%',
+                  background:
+                    'linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)',
+                  transition: 'left 0.7s ease',
+                },
+                '&:hover::before': {
+                  left: '100%',
+                },
+              }}
             >
-              <div
-                className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent 
-                             via-white/10 to-transparent translate-x-[-100%] 
-                             group-hover/btn:translate-x-[100%] transition-transform duration-700"
-              />
-
-              <svg
-                className="w-5 h-5 mr-3 group-hover/btn:animate-bounce 
-                             transition-transform duration-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                />
-              </svg>
-              <span className="relative z-10">Download Flyer</span>
-            </a>
+              <span style={{ position: 'relative', zIndex: 1 }}>Download Flyer</span>
+            </Button>
           </div>
         </div>
       </div>
