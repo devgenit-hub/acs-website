@@ -16,11 +16,11 @@ export const kynotespeaker3 = '/images/keynote-speakers/Bihongo.jpg';
 
 // hero-carousel
 export const herocarousel1 = '/images/herocarousel/Curzon_Hall.jpg';
-export const herocarousel2 = '/images/herocarousel/Administrative_Building.jpg';
+export const herocarousel2 = '/images/herocarousel/Administrative_Building,_Dhaka_University.jpg';
 export const herocarousel3 = '/images/herocarousel/raju.jpg';
 
 // About us
-export const aboutUs = '/images/about-us/our_team.jpg';
+export const aboutUs = '/images/about-us/our_team.JPG';
 
 // Executive Members
 export const m1 = '/images/about-us/Executive/Rakib.jpg';

@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
 const galleryImages = [
-  { id: 1, src: '/images/about-us/Executive/our_team.jpg', alt: '' },
-  { id: 2, src: '/images/about-us/Executive/our_team.jpg', alt: '' },
-  { id: 3, src: '/images/about-us/Executive/our_team.jpg', alt: '' },
-  { id: 4, src: '/images/about-us/Executive/our_team.jpg', alt: '' },
-  { id: 5, src: '/images/about-us/Executive/our_team.jpg', alt: '' },
+  { id: 1, src: '/images/about-us/our_team.JPG', alt: '' },
+  { id: 2, src: '/images/about-us/our_team.JPG', alt: '' },
+  { id: 3, src: '/images/about-us/our_team.JPG', alt: '' },
+  { id: 4, src: '/images/about-us/our_team.JPG', alt: '' },
+  { id: 5, src: '/images/about-us/our_team.JPG', alt: '' },
 ];
 
 export default function EventGallery() {

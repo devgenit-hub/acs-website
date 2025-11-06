@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: [{ name: 'ACS Bangladesh Youth Summit' }],
-  creator: 'American Chemical Society (ACS) Student Chapter, University of Dhaka',
+  creator: 'American Chemical Society (ACS) DU Students Chapter, University of Dhaka',
   publisher: 'American Chemical Society (ACS) Bangladesh Chapter',
   metadataBase: new URL(siteConfig.url),
   alternates: {
