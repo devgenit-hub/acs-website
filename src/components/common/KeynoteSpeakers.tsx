@@ -36,7 +36,7 @@ const speakers: Speaker[] = [
 export default function KeynoteSpeakers() {
   return (
     <section className="bg-background pt-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-10 text-primary">
           Keynote Speakers
         </h2>

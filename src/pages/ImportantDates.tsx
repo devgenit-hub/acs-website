@@ -40,7 +40,7 @@ export default function ImportantDatesPage() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-background to-secondary pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-20 lg:pb-24">
       <div className="px-4 md:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-14 md:mb-16">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent mb-3 sm:mb-4 px-4">
@@ -53,7 +53,7 @@ export default function ImportantDatesPage() {
           </div>
 
           {/* Timeline */}
-          <div className="relative max-w-7xl mx-auto">
+          <div className="relative mx-auto">
             {/* Desktop Timeline - Vertical Center Line */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20" />
 

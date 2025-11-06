@@ -6,7 +6,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 export default function Flyer() {
   return (
     <section className="pt-16 md:pt-20 lg:pt-24 px-4 md:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/20">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-4">

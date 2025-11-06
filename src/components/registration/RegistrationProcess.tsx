@@ -57,7 +57,7 @@ const registrationFees: RegistrationFees[] = [
 export default function RegistrationProcess() {
   return (
     <main className="pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-20 lg:pb-24 px-4 md:px-6 lg:px-8 container mx-auto">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         {/* Header */}
         <header className="text-center mb-8 sm:mb-10 md:mb-12">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">

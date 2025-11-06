@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 export default function MainSection() {
   return (
     <section className="pt-16 md:pt-20 lg:pt-24 pb-24 px-4 md:px-6 lg:px-8 bg-gradient-to-br from-background to-muted">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto">
         {/* Header */}
         <header className="text-center">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-10">

@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Transport() {
   return (
     <section className="pb-24 px-4 bg-gradient-to-br from-white to-gray-100">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-primary mb-4">

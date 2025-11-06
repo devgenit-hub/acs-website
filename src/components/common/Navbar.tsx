@@ -11,7 +11,6 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -33,6 +32,7 @@ const links: Links[] = [
   { text: 'Important Dates', link: '/important-dates' },
   { text: 'Registration', link: '/registration' },
   { text: 'Abstract Submission', link: '/abstract-submission' },
+  { text: 'Video Competition', link: '/video-competition' },
   { text: 'About Us', link: '/about-us' },
 ];
 
@@ -59,19 +59,6 @@ const muiTheme = createTheme({
           fontWeight: 500,
           '&:hover': {
             backgroundColor: 'transparent',
-          },
-        },
-      },
-    },
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          maxWidth: '100%',
-          paddingLeft: '16px',
-          paddingRight: '16px',
-          '@media (min-width: 768px)': {
-            paddingLeft: '24px',
-            paddingRight: '24px',
           },
         },
       },
@@ -119,7 +106,7 @@ export default function Navbar() {
   };
 
   const NavbarContent = () => (
-    <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 3 } }}>
+    <div className="container mx-auto px-4 md:px-6 lg:px-8">
       <Box
         sx={{
           display: 'flex',
@@ -150,7 +137,7 @@ export default function Navbar() {
                   py: 1,
                   color: isActive ? '#ffcc00' : '#ffffff',
                   fontWeight: isActive ? 600 : 500,
-                  fontSize: isActive ? '1.05rem' : '1rem',
+                  fontSize: isActive ? '0.95rem' : '0.875rem',
                   position: 'relative',
                   '&:hover': {
                     color: '#ffcc00',
@@ -192,7 +179,7 @@ export default function Navbar() {
           {mobileOpen ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
       </Box>
-    </Container>
+    </div>
   );
 
   // Mobile drawer content
@@ -225,7 +212,7 @@ export default function Navbar() {
                   primary={link.text}
                   primaryTypographyProps={{
                     fontWeight: isActive ? 600 : 500,
-                    fontSize: isActive ? '1.05rem' : '1rem',
+                    fontSize: isActive ? '0.95rem' : '0.875rem',
                     color: isActive ? '#004b87' : '#333333',
                   }}
                 />
