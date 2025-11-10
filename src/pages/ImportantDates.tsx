@@ -19,7 +19,7 @@ const dates: Dates[] = [
   {
     id: 2,
     title: 'Abstract Submission Deadline',
-    date: '15 November, 2025',
+    date: '22 November, 2025',
     icon: <MdDescription className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />,
   },
   {

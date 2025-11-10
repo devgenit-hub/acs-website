@@ -55,7 +55,7 @@ const HeroCarousel: FC = () => {
                   <span className="font-semibold text-sm sm:text-base">
                     Abstract Submission Deadline:
                   </span>
-                  <span className="">15 November, 2025</span>
+                  <span className="">22 November, 2025</span>
                 </div>
               </div>
 
@@ -180,8 +180,8 @@ const Actions = () => {
       {/* Call To Action Buttons */}
       <div className="flex flex-wrap grow-0  gap-8 justify-center">
         <Link
-          href="/docs/template.docx"
-          download="Abstract_Template.docx"
+          href="/docs/template.pdf"
+          download="Abstract_Template.pdf"
           className="bg-accent hover:bg-accent/90 text-secondary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg flex items-center gap-2 bling-shadow"
         >
           <FiDownload />

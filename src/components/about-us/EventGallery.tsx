@@ -1,11 +1,9 @@
 import Image from 'next/image';
 
 const galleryImages = [
-  { id: 1, src: '/images/about-us/our_team.JPG', alt: '' },
-  { id: 2, src: '/images/about-us/our_team.JPG', alt: '' },
-  { id: 3, src: '/images/about-us/our_team.JPG', alt: '' },
-  { id: 4, src: '/images/about-us/our_team.JPG', alt: '' },
-  { id: 5, src: '/images/about-us/our_team.JPG', alt: '' },
+  { id: 1, src: '/event-gallery/WhatsApp Image 2025-11-06 at 15.59.25_716190f3.jpg', alt: '' },
+  { id: 2, src: '/event-gallery/WhatsApp Image 2025-11-06 at 15.59.26_3dcee432.jpg', alt: '' },
+  { id: 3, src: '/event-gallery/WhatsApp Image 2025-11-06 at 15.59.26_6dcd5fb4.jpg', alt: '' },
 ];
 
 export default function EventGallery() {

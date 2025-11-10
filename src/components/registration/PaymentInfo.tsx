@@ -1,14 +1,7 @@
 import React from 'react';
 import { bkash, nagad } from '@/assets';
 import Image from 'next/image';
-import {
-  FaBuilding,
-  FaMapMarkerAlt,
-  FaHashtag,
-  FaUser,
-  FaUniversity,
-  FaMobileAlt,
-} from 'react-icons/fa';
+import { FaUser, FaUniversity, FaMobileAlt } from 'react-icons/fa';
 
 export default function PaymentInfo() {
   return (
@@ -22,7 +15,7 @@ export default function PaymentInfo() {
 
       <div className="p-8">
         {/* Bank Info */}
-        <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
+        {/* <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
           <div className="bg-accent/20 p-6 rounded-xl border-2 border-accent">
             <div className="text-center">
               <div className="text-2xl font-bold text-foreground mb-2">অগ্রণী ব্যাংক লিমিটেড</div>
@@ -66,7 +59,7 @@ export default function PaymentInfo() {
               <p className="text-muted-foreground font-medium">DU</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile Banking Section */}
         <div className="mb-12">

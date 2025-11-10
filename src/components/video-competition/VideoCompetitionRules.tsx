@@ -1,5 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
+import { FiExternalLink, FiUploadCloud } from 'react-icons/fi';
 import {
+  MdOutlineAttachMoney,
+  MdOutlineSchool,
   MdOutlineVideoLibrary,
   MdOutlineTimer,
   MdOutlineGroup,
@@ -48,6 +52,24 @@ const rules: Rule[] = [
       'Fully AI-generated content is prohibited. Originality with technological edits is encouraged (animation, voice-over, experiments).',
     icon: <MdOutlineAutoAwesome className="w-8 h-8 text-primary" />,
   },
+  {
+    id: 6,
+    title: 'Eligibility',
+    description: 'Only college students are eligible to participate.',
+    icon: <MdOutlineSchool className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 7,
+    title: 'Team Size',
+    description: 'Each team must consist of 3–5 members.',
+    icon: <MdOutlineGroup className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 8,
+    title: 'Registration Fee',
+    description: 'Registration fee is 500 BDT per team.',
+    icon: <MdOutlineAttachMoney className="w-8 h-8 text-primary" />,
+  },
 ];
 
 export default function VideoCompetitionRules() {
@@ -90,6 +112,33 @@ export default function VideoCompetitionRules() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Ready to showcase your creativity? Complete the registration form to secure your team’s
+            spot in the competition.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd-hPEkDqI4kOQDddUq83tKtp4Vj79icAOwJMLkaQYGWWlm2Q/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
+              Register Now
+              <FiExternalLink className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSey2doJItnMiH93V-HKcles64ljQbpkfluvTS_rbzzEnMiR7Q/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+            >
+              Submit Video
+              <FiUploadCloud className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

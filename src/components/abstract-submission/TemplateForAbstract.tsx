@@ -17,8 +17,8 @@ export default function TemplateForAbstract() {
       <nav className="text-center mt-10" aria-label="Download template">
         <Button
           component={Link}
-          href="/docs/template.docx"
-          download="Abstract_Template.docx"
+          href="/docs/template.pdf"
+          download="Abstract_Template.pdf"
           variant="contained"
           size="medium"
           startIcon={<BiDownload />}

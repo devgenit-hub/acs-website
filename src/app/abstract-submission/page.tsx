@@ -4,11 +4,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Abstract Submission Portal - Submit Your Abstract Online | ICESGE-2025',
   description:
-    'Submit your abstract for the 1st International Conference on Environmental Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025). View guidelines, templates, and submission instructions. Abstract submission deadline: 15 November, 2025.',
+    'Submit your abstract for the 1st International Conference on Environmental Sustainability and Green Earth: ACS Bangladesh Youth Summit (ICESGE-2025). View guidelines, templates, and submission instructions. Abstract submission deadline: 22 November, 2025.',
   openGraph: {
     title: 'Abstract Submission Portal - Submit Your Abstract Online | ICESGE-2025',
     description:
-      'Submit your abstract for ICESGE-2025. View guidelines, templates, and submission instructions. Deadline: 15 November, 2025.',
+      'Submit your abstract for ICESGE-2025. View guidelines, templates, and submission instructions. Deadline: 22 November, 2025.',
   },
 };
 
