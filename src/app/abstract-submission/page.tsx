@@ -1,4 +1,4 @@
-import AbstractSubmission from '@/pages/AbstractSubmission';
+import AbstractSubmission from '@/modules/abstract-submission/pages/AbstractSubmission';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

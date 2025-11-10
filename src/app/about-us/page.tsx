@@ -1,4 +1,4 @@
-import AboutUs from '@/pages/AboutUs';
+import AboutUs from '@/modules/about/pages/AboutUs';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

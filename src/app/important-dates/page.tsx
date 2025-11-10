@@ -1,4 +1,4 @@
-import ImportantDatesPage from '@/pages/ImportantDates';
+import ImportantDatesPage from '@/modules/important-dates/pages/ImportantDates';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

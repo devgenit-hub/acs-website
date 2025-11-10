@@ -1,4 +1,4 @@
-import VideoCompetition from '@/pages/VideoCompetition';
+import VideoCompetition from '@/modules/video-competition/pages/VideoCompetition';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

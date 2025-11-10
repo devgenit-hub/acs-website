@@ -1,4 +1,4 @@
-import Registration from '@/pages/Registration';
+import Registration from '@/modules/registration/pages/Registration';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

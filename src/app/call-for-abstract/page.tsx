@@ -1,4 +1,4 @@
-import OnlineAbstract from '@/pages/OnlineAbstract';
+import OnlineAbstract from '@/modules/call-for-abstract/pages/OnlineAbstract';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
