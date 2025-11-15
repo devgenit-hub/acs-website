@@ -12,21 +12,22 @@ interface Dates {
 const dates: Dates[] = [
   {
     id: 1,
-    title: 'Registration Deadline',
-    date: '30 November, 2025',
-    icon: <MdHowToReg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />,
-  },
-  {
-    id: 2,
     title: 'Abstract Submission Deadline',
     date: '22 November, 2025',
     icon: <MdDescription className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />,
   },
   {
-    id: 3,
+    id: 2,
     title: 'Notification of Acceptance',
-    date: '1 December, 2025',
+    date: '27 November, 2025',
     icon: <MdMarkEmailRead className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />,
+  },
+  {
+    id: 3,
+    title: 'Registration Deadline',
+    date: '7 December, 2025',
+    strikethrough: ['Early Bird: 2 December, 2025'],
+    icon: <MdHowToReg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />,
   },
   {
     id: 4,
@@ -86,13 +87,19 @@ export default function ImportantDatesPage() {
                               {item.strikethrough.map((date, i) => (
                                 <p
                                   key={i}
-                                  className="text-xs sm:text-sm text-muted-foreground line-through mb-1"
+                                  className={`${
+                                    item.title === 'Registration Deadline'
+                                      ? 'text-xs text-muted-foreground opacity-75'
+                                      : 'text-xs sm:text-sm text-muted-foreground line-through'
+                                  } mb-1`}
                                 >
                                   {date}
                                 </p>
                               ))}
                               <p className="text-sm sm:text-base text-primary font-semibold">
-                                {item.date}
+                                {item.title === 'Registration Deadline'
+                                  ? `Regular: ${item.date}`
+                                  : item.date}
                               </p>
                             </>
                           ) : (
@@ -135,13 +142,19 @@ export default function ImportantDatesPage() {
                             {item.strikethrough.map((date, i) => (
                               <p
                                 key={i}
-                                className="text-sm lg:text-base text-muted-foreground line-through mb-1"
+                                className={`${
+                                  item.title === 'Registration Deadline'
+                                    ? 'text-xs lg:text-sm text-muted-foreground opacity-75'
+                                    : 'text-sm lg:text-base text-muted-foreground line-through'
+                                } mb-1`}
                               >
                                 {date}
                               </p>
                             ))}
                             <p className="text-sm lg:text-base text-primary font-semibold">
-                              {item.date}
+                              {item.title === 'Registration Deadline'
+                                ? `Regular: ${item.date}`
+                                : item.date}
                             </p>
                           </>
                         ) : (

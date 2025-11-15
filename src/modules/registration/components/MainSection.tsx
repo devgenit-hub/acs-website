@@ -20,7 +20,7 @@ export default function MainSection() {
           {/* Registration Deadline */}
           <div className="mb-8">
             <p className="text-xl font-semibold text-destructive">
-              Early Bird Registration Deadline: 30 November, 2025 <br />
+              Early Bird Registration Deadline: 2 December, 2025 <br />
               Regular Registration Deadline: 7 December, 2025
             </p>
           </div>
