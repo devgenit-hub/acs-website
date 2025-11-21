@@ -51,7 +51,7 @@ const HeroCarousel: FC = () => {
                   <span className="font-semibold text-sm sm:text-base">
                     Abstract Submission Deadline:
                   </span>
-                  <span className="">22 November, 2025</span>
+                  <span className="">24 November, 2025</span>
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col sm:flex-row justify-center items-center flex-wrap space-x-2 text-sm sm:text-base">
                   <span className="font-semibold text-sm sm:text-base">

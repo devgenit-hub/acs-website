@@ -33,39 +33,32 @@ const rules: Rule[] = [
   },
   {
     id: 3,
-    title: 'Teamwork',
-    description:
-      'Teamwork is encouraged, but you can also work single-handedly by creating your own approach.',
-    icon: <MdOutlineGroup className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 4,
     title: 'Language',
     description:
       'Video can be either in Bengali or English only. A mixture of languages is not allowed.',
     icon: <MdOutlineTranslate className="w-8 h-8 text-primary" />,
   },
   {
-    id: 5,
+    id: 4,
     title: 'Content Originality',
     description:
       'Fully AI-generated content is prohibited. Originality with technological edits is encouraged (animation, voice-over, experiments).',
     icon: <MdOutlineAutoAwesome className="w-8 h-8 text-primary" />,
   },
   {
-    id: 6,
+    id: 5,
     title: 'Eligibility',
     description: 'Only college students are eligible to participate.',
     icon: <MdOutlineSchool className="w-8 h-8 text-primary" />,
   },
   {
-    id: 7,
+    id: 6,
     title: 'Team Size',
     description: 'Each team must consist of 3–5 members.',
     icon: <MdOutlineGroup className="w-8 h-8 text-primary" />,
   },
   {
-    id: 8,
+    id: 7,
     title: 'Registration Fee',
     description: 'Registration fee is 500 BDT per team.',
     icon: <MdOutlineAttachMoney className="w-8 h-8 text-primary" />,
