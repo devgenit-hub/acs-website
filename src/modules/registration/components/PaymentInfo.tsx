@@ -65,7 +65,7 @@ export default function PaymentInfo({
                         <FaHashtag className="w-5 h-5 text-primary" />
                         <span className="font-semibold text-foreground">Account Number</span>
                       </div>
-                      <p className="text-muted-foreground font-mono font-medium">0200023735145</p>
+                      <p className="text-muted-foreground font-mono font-medium">200024825082</p>
                     </div>
 
                     <div className="bg-secondary p-4 rounded-lg border border-border">
@@ -81,7 +81,9 @@ export default function PaymentInfo({
                         <FaMapMarkerAlt className="w-5 h-5 text-destructive" />
                         <span className="font-semibold text-foreground">Branch Name</span>
                       </div>
-                      <p className="text-muted-foreground font-medium">DU</p>
+                      <p className="text-muted-foreground font-medium">
+                        University of Dhaka Branch
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -101,7 +103,7 @@ export default function PaymentInfo({
                       <FaUser className="w-5 h-5 text-primary" />
                       <span className="font-semibold text-foreground">
                         <p>Account Name</p>
-                        <p className="text-muted-foreground font-medium">Md. Rakibur Rahman</p>
+                        <p className="text-muted-foreground font-medium">Md. Rakibul Islam Rony</p>
                       </span>
                     </div>
                   </div>
@@ -112,7 +114,7 @@ export default function PaymentInfo({
                         <Image width={40} height={50} src={bkash} alt="Bkash" className="h-10" />
                         <span className="font-semibold text-foreground">
                           <p>Bkash</p>
-                          <p className="text-muted-foreground font-medium">01518618583</p>
+                          <p className="text-muted-foreground font-medium">01521746560</p>
                         </span>
                       </div>
                     </div>
@@ -122,7 +124,7 @@ export default function PaymentInfo({
                         <Image width={40} height={50} src={nagad} alt="Nagad" className="h-10" />
                         <span className="font-semibold text-foreground">
                           <p>Nagad</p>
-                          <p className="text-muted-foreground font-medium">01518618583</p>
+                          <p className="text-muted-foreground font-medium">01521746560</p>
                         </span>
                       </div>
                     </div>

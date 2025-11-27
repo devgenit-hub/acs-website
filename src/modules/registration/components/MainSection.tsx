@@ -28,7 +28,7 @@ export default function MainSection() {
           {/* Registration Button */}
           <Button
             component="a"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdzK-cXInAVXpICEWEsK0CXFgNo8X7MAxMC7xjMk0Xj1fETIQ/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScaIlaU7dcjzjjQmocKDTwrP4UwDGo_uahUHhTzQmY6iScPrg/viewform?usp=publish-editor"
             target="_blank"
             rel="noopener noreferrer"
             variant="contained"
