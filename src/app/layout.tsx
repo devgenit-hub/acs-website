@@ -5,8 +5,8 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { AppProvider } from '@/context/app-context';
 import { LocaleProvider } from '@/providers/locale-provider';
 import { siteConfig } from '@/config/site';
-import Navbar from '@/components/common/Navbar';
-import Footer from '@/components/common/Footer';
+import Navbar from '@/ui/layout/Navbar';
+import Footer from '@/ui/layout/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,13 +24,55 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  metadataBase: new URL('https://example.com'),
+  keywords: siteConfig.keywords,
+  authors: [{ name: 'ACS Bangladesh Youth Summit' }],
+  creator: 'American Chemical Society (ACS) DU Students Chapter, University of Dhaka',
+  publisher: 'American Chemical Society (ACS) Bangladesh Chapter',
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '3PM0V6pN17mTKBjKs6hM3UxiNNeXcFZBljazoKNe35Y',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/icon.png',
+  },
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [{ url: siteConfig.ogImage }],
+    type: 'website',
+    locale: 'en_US',
     url: siteConfig.url,
     siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: '@ACS',
   },
 };
 
